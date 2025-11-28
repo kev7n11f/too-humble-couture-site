@@ -88,6 +88,7 @@
             justify-content: space-between;
             align-items: center;
             background: rgba(10, 10, 10, 0.9);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             transition: all 0.3s;
         }
@@ -341,6 +342,10 @@
             overflow: hidden;
             transition: color 0.4s var(--ease-out-expo);
         }
+
+        .btn-explore {
+            margin-top: 2rem;
+        }
         
         .btn::before {
             content: '';
@@ -379,6 +384,13 @@
         
         .btn-solid::before {
             background: var(--cream);
+        }
+        
+        /* Utility: full width button used in modals/checkout */
+        .btn-full {
+            width: 100%;
+            text-align: center;
+            display: inline-block;
         }
         
         .scroll-indicator {
@@ -691,7 +703,38 @@
             background: var(--dark-gray);
         }
         
+        .size-chart-heading {
+            font-family: var(--font-display);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .size-chart-heading-joggers {
+            margin-top: 3rem;
+        }
+        
+        .size-chart-note {
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--light-gray);
+            font-size: 0.875rem;
+        }
+        
+        .size-chart-link {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .size-chart-link:hover {
+            color: var(--gold-light);
+        }
+        
         /* Contact Section */
+        .contact-section {
+            background: var(--off-black);
+        }
+        
         .contact {
             max-width: 800px;
             margin: 0 auto;
@@ -747,6 +790,10 @@
         .form-group textarea {
             min-height: 150px;
             resize: vertical;
+        }
+        
+        .contact-submit {
+            justify-self: start;
         }
         
         /* Newsletter */
@@ -997,6 +1044,19 @@
             margin-bottom: 1.5rem;
         }
         
+        .cart-subtotal-line {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cart-shipping-note {
+            color: var(--light-gray);
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+        
         /* Toast Notification */
         .toast {
             position: fixed;
@@ -1223,11 +1283,11 @@
         <div class="about reveal">
             <div class="about-text">
                 <h2>THE PHILOSOPHY</h2>
-                <p>In a world of loud flexes and obvious wealth displays, true style speaks with quiet confidence—or does it?</p>
+                <a href="#shop" class="btn btn-explore">Explore Collection</a>
                 <span class="highlight">"The loudest statement is claiming you have nothing to prove."</span>
                 <p>Too Humble Couture is for those self-aware individuals who understand the irony. The ones who can laugh at themselves while looking absolutely incredible doing it. Premium fabrics. Elevated cuts. A wink at the culture.</p>
                 <p>Because nothing says "I don't need validation" quite like wearing it on a $85 hoodie.</p>
-                <a href="#shop" class="btn" style="margin-top: 2rem;">Explore Collection</a>
+                <a href="#shop" class="btn btn-explore">Explore Collection</a>
             </div>
             <div class="about-image">
                 <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=800&q=80" alt="Too Humble Couture Lifestyle">
@@ -1384,7 +1444,7 @@
         </div>
         
         <div class="size-chart reveal">
-            <h3 style="font-family: var(--font-display); margin-bottom: 1.5rem; text-align: center;">T-SHIRTS & HOODIES</h3>
+            <h3 class="size-chart-heading">T-SHIRTS & HOODIES</h3>
             <table>
                 <thead>
                     <tr>
@@ -1403,7 +1463,7 @@
                 </tbody>
             </table>
             
-            <h3 style="font-family: var(--font-display); margin: 3rem 0 1.5rem; text-align: center;">JOGGERS</h3>
+            <h3 class="size-chart-heading size-chart-heading-joggers">JOGGERS</h3>
             <table>
                 <thead>
                     <tr>
@@ -1422,14 +1482,14 @@
                 </tbody>
             </table>
             
-            <p style="text-align: center; margin-top: 2rem; color: var(--light-gray); font-size: 0.875rem;">
-                Our pieces are designed with an oversized fit. For a more fitted look, size down. Need help? <a href="#contact" style="color: var(--gold);">Contact us</a>
+            <p class="size-chart-note">
+                Our pieces are designed with an oversized fit. For a more fitted look, size down. Need help? <a href="#contact" class="size-chart-link">Contact us</a>
             </p>
         </div>
     </section>
     
     <!-- Contact Section -->
-    <section id="contact" style="background: var(--off-black);">
+    <section id="contact" class="contact-section">
         <div class="section-header reveal">
             <h2>GET IN TOUCH</h2>
             <p>Questions, collaborations, or just want to chat?</p>
@@ -1461,7 +1521,7 @@
                     <label for="message">Message</label>
                     <textarea id="message" name="message" required placeholder="What's on your mind?"></textarea>
                 </div>
-                <button type="submit" class="btn btn-gold" style="justify-self: start;">Send Message</button>
+                <button type="submit" class="btn btn-gold contact-submit">Send Message</button>
             </form>
         </div>
     </section>
@@ -1475,26 +1535,21 @@
             data-sv-form="8820031" data-uid="303619af04" data-format="modal" data-version="5"
             data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;scroll&quot;,&quot;scroll_percentage&quot;:&quot;10&quot;,&quot;timer&quot;:&quot;30&quot;,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:&quot;1&quot;},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}"
             min-width="400 500 600 700 800">
-            <div class="formkit-container" data-style="full" style="background-color: rgb(255, 255, 255);">
+            <div class="formkit-container" data-style="full">
                 <div class="formkit-hero">
-                    <div class="formkit-hero-bg-color" style="background-color: rgb(16, 16, 16);"></div>
-                    <div class="formkit-hero-bg-img"
-                        style="background-color: rgb(16, 16, 16); background-image: url(&quot;//pages.convertkit.com/assets/rainier/bg.jpg&quot;); opacity: 0.3;">
+                    <div class="formkit-hero-bg-color"></div>
+                    <div class="formkit-hero-bg-img">
                     </div>
-                    <div class="formkit-header" data-element="header"
-                        style="color: rgb(255, 255, 255); font-size: 28px; font-weight: 700;">Join our newsletter</div>
-                    <div class="formkit-content" data-element="content"
-                        style="color: rgb(255, 255, 255); font-size: 18px; font-weight: 400;">Receive tips and tricks on how to
+                    <div class="formkit-header" data-element="header">Join our newsletter</div>
+                    <div class="formkit-content" data-element="content">Receive tips and tricks on how to
                         lorum ipsum.</div>
                 </div>
                 <div>
                     <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
                     <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
                         <div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email Address"
-                                placeholder="Email Address" required="" type="email"
-                                style="color: rgb(146, 146, 146); border-color: rgb(228, 231, 234); border-radius: 0px; font-weight: 400;">
-                        </div><button data-element="submit" class="formkit-submit formkit-submit"
-                            style="color: rgb(255, 255, 255); background-color: rgb(199, 92, 86); border-radius: 0px; font-weight: 700;">
+                                placeholder="Email Address" required="" type="email">
+                        </div><button type="submit" data-element="submit" class="formkit-submit formkit-submit">
                             <div class="formkit-spinner">
                                 <div></div>
                                 <div></div>
@@ -1505,10 +1560,51 @@
                     <div class="formkit-powered-by-convertkit-container"><a
                             href="https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic"
                             data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark" target="_blank"
-                            rel="nofollow">Built with Kit</a></div>
+                            rel="nofollow noopener">Built with Kit</a></div>
                 </div>
             </div>
             <style>
+                /* FormKit Form Overrides */
+                .formkit-container[data-style="full"] {
+                    background-color: rgb(255, 255, 255);
+                }
+                
+                .formkit-hero-bg-color {
+                    background-color: rgb(16, 16, 16);
+                }
+                
+                .formkit-hero-bg-img {
+                    background-color: rgb(16, 16, 16);
+                    background-image: url("//pages.convertkit.com/assets/rainier/bg.jpg");
+                    opacity: 0.3;
+                }
+                
+                .formkit-header[data-element="header"] {
+                    color: rgb(255, 255, 255);
+                    font-size: 28px;
+                    font-weight: 700;
+                }
+                
+                .formkit-content[data-element="content"] {
+                    color: rgb(255, 255, 255);
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+                
+                .formkit-input {
+                    color: rgb(146, 146, 146);
+                    border-color: rgb(228, 231, 234);
+                    border-radius: 0px;
+                    font-weight: 400;
+                }
+                
+                .formkit-submit[data-element="submit"] {
+                    color: rgb(255, 255, 255);
+                    background-color: rgb(199, 92, 86);
+                    border-radius: 0px;
+                    font-weight: 700;
+                }
+                
                 .formkit-form[data-uid="303619af04"] * {
                     box-sizing: border-box;
                 }
@@ -2055,6 +2151,7 @@
                 .formkit-form[data-uid="303619af04"] .formkit-fields input,
                 .formkit-form[data-uid="303619af04"] .formkit-fields select {
                     -webkit-appearance: none;
+                    appearance: none;
                 }
         
                 .formkit-form[data-uid="303619af04"] .formkit-field,
@@ -2175,19 +2272,19 @@
     
     <!-- Cart Modal -->
     <div class="modal-overlay" id="cart-modal">
-        <div class="modal">
-            <button class="modal-close" onclick="closeCart()">×</button>
-            <h3>YOUR CART</h3>
-            <div id="cart-items">
-                <p style="color: var(--light-gray);">Your cart is empty. Time to get humble.</p>
-            </div>
-            <div id="cart-total" style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--gray); display: none;">
-                <p style="display: flex; justify-content: space-between; font-size: 1.125rem; margin-bottom: 1rem;">
+                <p class="cart-subtotal-line">
                     <span>Subtotal</span>
                     <span id="cart-subtotal">$0.00</span>
                 </p>
-                <p style="color: var(--light-gray); font-size: 0.875rem; margin-bottom: 1.5rem;">Shipping calculated at checkout</p>
-                <a href="https://too-humble-couture.printify.me" target="_blank" class="btn btn-solid" style="width: 100%; text-align: center;">Checkout</a>
+                <p class="cart-shipping-note">Shipping calculated at checkout</p>
+                <a href="https://too-humble-couture.printify.me" target="_blank" rel="noopener noreferrer" class="btn btn-solid btn-full">Checkout</a>
+            </div>
+                <p class="cart-subtotal-line">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </p>
+                <p class="cart-shipping-note">Shipping calculated at checkout</p>
+                <a href="https://too-humble-couture.printify.me" target="_blank" rel="noopener noreferrer" class="btn btn-solid btn-full">Checkout</a>
             </div>
         </div>
     </div>
