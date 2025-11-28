@@ -57,11 +57,13 @@ For each product below, follow these steps:
 **Print Size:** 12" x 12" (adjust to fit)  
 
 **Recommended Colors:**
+
 - Black (primary)
 - Navy
 - Dark Heather
 
 **Pricing:**
+
 | Size | Base Cost | Recommended Price | Profit |
 |------|-----------|-------------------|--------|
 | S-XL | ~$9.50 | $45.00 | $35.50 |
@@ -79,11 +81,13 @@ For each product below, follow these steps:
 **Print Size:** 12" x 14" (adjust to fit)  
 
 **Recommended Colors:**
+
 - Black (primary)
 - Dark Heather
 - Navy
 
 **Pricing:**
+
 | Size | Base Cost | Recommended Price | Profit |
 |------|-----------|-------------------|--------|
 | S-XL | ~$18.00 | $85.00 | $67.00 |
@@ -101,11 +105,13 @@ For each product below, follow these steps:
 **Print Size:** 4" x 2" (adjust for cap)  
 
 **Recommended Colors:**
+
 - Black (primary)
 - Navy
 - Charcoal
 
 **Pricing:**
+
 | Type | Base Cost | Recommended Price | Profit |
 |------|-----------|-------------------|--------|
 | Dad Cap | ~$10.00 | $38.00 | $28.00 |
@@ -122,10 +128,12 @@ For each product below, follow these steps:
 **Print Size:** 4" x 3" (small logo placement)  
 
 **Recommended Colors:**
+
 - Black (primary)
 - Dark Gray
 
 **Pricing:**
+
 | Size | Base Cost | Recommended Price | Profit |
 |------|-----------|-------------------|--------|
 | S-XL | ~$22.00 | $72.00 | $50.00 |
@@ -142,11 +150,13 @@ For each product below, follow these steps:
 **Print Size:** 12" x 12"  
 
 **Recommended Colors:**
+
 - Black (primary)
 - Charcoal
 - Dark Heather
 
 **Pricing:**
+
 | Size | Base Cost | Recommended Price | Profit |
 |------|-----------|-------------------|--------|
 | S-XL | ~$14.00 | $68.00 | $54.00 |
@@ -163,11 +173,13 @@ For each product below, follow these steps:
 **Print Size:** 8" x 8"  
 
 **Recommended Colors:**
+
 - Black (primary)
 - Navy
 - Forest Green
 
 **Pricing:**
+
 | Size | Base Cost | Recommended Price | Profit |
 |------|-----------|-------------------|--------|
 | S-XL | ~$9.50 | $45.00 | $35.50 |
@@ -184,10 +196,12 @@ For each product below, follow these steps:
 **Print Size:** 12" x 14"  
 
 **Recommended Colors:**
+
 - Black (primary)
 - Dark Gray
 
 **Pricing:**
+
 | Size | Base Cost | Recommended Price | Profit |
 |------|-----------|-------------------|--------|
 | S-XL | ~$18.00 | $85.00 | $67.00 |
@@ -205,9 +219,11 @@ For each product below, follow these steps:
 **Note:** Mark as "Limited Edition" in product description  
 
 **Recommended Colors:**
+
 - Black only (exclusivity)
 
 **Pricing:**
+
 | Size | Base Cost | Recommended Price | Profit |
 |------|-----------|-------------------|--------|
 | S-XL | ~$12.00 | $52.00 | $40.00 |
@@ -225,14 +241,17 @@ For each product below, follow these steps:
 **Print Size:** Back: 12" x 16", Front: 3" x 3"  
 
 **Recommended Colors:**
+
 - Black (primary)
 
 **Pricing (T-Shirt):**
+
 | Size | Base Cost | Recommended Price | Profit |
 |------|-----------|-------------------|--------|
 | S-XL | ~$12.00 | $52.00 | $40.00 |
 
 **Pricing (Hoodie):**
+
 | Size | Base Cost | Recommended Price | Profit |
 |------|-----------|-------------------|--------|
 | S-XL | ~$22.00 | $92.00 | $70.00 |
@@ -242,14 +261,17 @@ For each product below, follow these steps:
 ## Print Provider Recommendations
 
 ### Best Quality (Higher Cost)
+
 - **Printful** - Best for premium products
 - **Gooten** - Good quality, reliable
 
 ### Best Value (Budget-Friendly)
+
 - **Monster Digital** - Great balance of quality/price
 - **SwiftPOD** - Fast shipping, good quality
 
 ### Fastest Shipping (US)
+
 - **Monster Digital** - 2-5 day production
 - **The Dream Junction** - Fast for hats
 
@@ -258,16 +280,19 @@ For each product below, follow these steps:
 ## Design Placement Tips
 
 ### T-Shirts & Hoodies
+
 - Center design horizontally
 - Position 2-3 inches below neckline
 - Use "fit to print area" then scale to ~80%
 
 ### Caps & Hats
+
 - Center on front panel
 - Leave margin from edges
 - Test with mockup generator
 
 ### Joggers/Pants
+
 - Small logo on left hip/thigh
 - Position 4-6 inches below waistband
 - Keep design under 5" wide
@@ -322,6 +347,7 @@ Part of the Too Humble Couture collection - streetwear for those self-aware enou
 When setting up your store, order samples to verify quality:
 
 **Priority samples to order:**
+
 1. VERY HUMBLE Tee (your bestseller)
 2. NOT BRAGGING Hoodie (high-margin item)
 3. LOWKEY Cap (accessory check)
@@ -336,16 +362,19 @@ When setting up your store, order samples to verify quality:
 Your website at toohumblecouture.com can link directly to products:
 
 ### Option A: Printify Pop-Up Store
+
 - Create Printify Pop-Up Store
 - Use as your checkout system
 - Link "Add to Cart" buttons to Pop-Up Store product pages
 
 ### Option B: Shopify/WooCommerce
+
 - Connect Printify to your platform
 - Products sync automatically
 - Embedded checkout on your domain
 
 ### Option C: Direct Links
+
 - Link each product to Printify Pop-Up Store
 - Simple setup, less branding control
 
@@ -367,6 +396,7 @@ Your website at toohumblecouture.com can link directly to products:
 ## Contact & Support
 
 For design modifications or additional designs, you have the SVG source files which can be edited in:
+
 - Adobe Illustrator
 - Figma
 - Inkscape (free)
