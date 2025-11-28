@@ -35,6 +35,7 @@
             width: 100%;
             padding: 1.5rem 3rem;
             background: rgba(10, 10, 10, 0.95);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             z-index: 1000;
             display: flex;
@@ -76,6 +77,10 @@
             color: var(--gold);
             margin: 2.5rem 0 1rem;
             letter-spacing: 0.05em;
+        }
+        .region-title {
+            font-family: var(--font-display);
+            margin: 1.5rem 0 1rem;
         }
         p { margin-bottom: 1rem; color: var(--cream); opacity: 0.9; }
         ul { margin: 1rem 0 1rem 2rem; }
@@ -155,13 +160,13 @@
                 <tr><td>Hoodies & Sweatshirts</td><td>2-5 business days</td></tr>
                 <tr><td>Hats & Caps</td><td>2-5 business days</td></tr>
                 <tr><td>Joggers & Pants</td><td>2-5 business days</td></tr>
-            </tbody>
-        </table>
-        <p><em>Note: Production times may be longer during peak seasons (holidays, special promotions).</em></p>
-        
         <h2>SHIPPING TIMES & COSTS</h2>
         
-        <h3 style="font-family: var(--font-display); margin: 1.5rem 0 1rem;">United States</h3>
+        <h3 class="region-title">United States</h3>
+        <table>
+        <h2>SHIPPING TIMES & COSTS</h2>
+        
+        <h3 class="region-title">United States</h3>
         <table>
             <thead>
                 <tr>
@@ -170,13 +175,13 @@
                     <th>Cost</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr><td>Standard Shipping</td><td>3-7 business days</td><td>$4.99</td></tr>
-                <tr><td>Express Shipping</td><td>2-4 business days</td><td>$9.99</td></tr>
-            </tbody>
         </table>
         
-        <h3 style="font-family: var(--font-display); margin: 1.5rem 0 1rem;">International</h3>
+        <h3 class="region-title">International</h3>
+        <table>
+        </table>
+        
+        <h3 class="region-title">International</h3>
         <table>
             <thead>
                 <tr>
