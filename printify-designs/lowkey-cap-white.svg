@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 800" width="2000" height="800">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap');
+      .main-text { font-family: 'Bebas Neue', Arial, sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- Transparent background for print -->
+  <rect width="2000" height="800" fill="none"/>
+  
+  <!-- Main Text -->
+  <text x="1000" y="520" text-anchor="middle" class="main-text" fill="#FFFFFF" font-size="320" letter-spacing="40">LOWKEY</text>
+  
+  <!-- Underline -->
+  <line x1="400" y1="600" x2="1600" y2="600" stroke="#C9A227" stroke-width="6"/>
+</svg>

@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Too Humble Couture - Premium streetwear for those who are clearly, obviously, undeniably... too humble. Tongue-in-cheek luxury apparel.">
+    <meta name="keywords" content="streetwear, humble, luxury fashion, ironic clothing, premium apparel, too humble, THC clothing">
+    <meta property="og:title" content="Too Humble Couture | Premium Streetwear for the Obviously Humble">
+    <meta property="og:description" content="For those who need everyone to know just how humble they are.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toohumblecouture.com">
+    <meta property="og:image" content="https://toohumblecouture.com/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://toohumblecouture.com">
+    <title>Too Humble Couture | Premium Streetwear for the Obviously Humble</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --off-black: #141414;
+            --dark-gray: #1a1a1a;
+            --gray: #2a2a2a;
+            --light-gray: #888;
+            --cream: #f5f0e8;
+            --gold: #c9a227;
+            --gold-light: #e8d48a;
+            --white: #ffffff;
+            --success: #4ade80;
+            --error: #ef4444;
+            
+            --font-display: 'Bebas Neue', sans-serif;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'DM Sans', sans-serif;
+            
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            background: var(--black);
+            color: var(--cream);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        ::selection {
+            background: var(--gold);
+            color: var(--black);
+        }
+        
+        /* Grain Overlay */
+        .grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+        }
+        
+        nav.scrolled {
+            padding: 1rem 3rem;
+            background: rgba(10, 10, 10, 0.98);
+        }
+        
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            letter-spacing: 0.2em;
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-logo:hover {
+            color: var(--gold);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.3s var(--ease-out-expo);
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-cart {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -12px;
+            background: var(--gold);
+            color: var(--black);
+            font-size: 0.6rem;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+        
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 10px;
+        }
+        
+        .menu-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--cream);
+            transition: all 0.3s;
+            display: block;
+        }
+        
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+        
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: var(--black);
+            z-index: 999;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        
+        .mobile-menu.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .mobile-menu a {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--cream);
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            transition: color 0.3s;
+        }
+        
+        .mobile-menu a:hover {
+            color: var(--gold);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--black) 0%, var(--off-black) 50%, var(--dark-gray) 100%);
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(201, 162, 39, 0.03) 0%, transparent 60%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 1; }
+        }
+        
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+            padding: 2rem;
+        }
+        
+        .hero-tagline {
+            font-family: var(--font-serif);
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            opacity: 0;
+            animation: fadeInUp 1s var(--ease-out-expo) 0.2s forwards;
+        }
+        
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(4rem, 15vw, 12rem);
+            line-height: 0.85;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.5rem;
+            opacity: 0;
+            animation: fadeInUp 1s var(--ease-out-expo) 0.4s forwards;
+        }
+        
+        .hero-title span {
+            display: block;
+        }
+        
+        .hero-title .outline {
+            -webkit-text-stroke: 1px var(--cream);
+            color: transparent;
+        }
+        
+        .hero-subtitle {
+            font-family: var(--font-serif);
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            font-style: italic;
+            font-weight: 300;
+            color: var(--light-gray);
+            margin-top: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s var(--ease-out-expo) 0.6s forwards;
+        }
+        
+        .hero-cta {
+            margin-top: 3rem;
+            opacity: 0;
+            animation: fadeInUp 1s var(--ease-out-expo) 0.8s forwards;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 3rem;
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid var(--cream);
+            color: var(--cream);
+            background: transparent;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.4s var(--ease-out-expo);
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--cream);
+            transition: left 0.4s var(--ease-out-expo);
+            z-index: -1;
+        }
+        
+        .btn:hover {
+            color: var(--black);
+        }
+        
+        .btn:hover::before {
+            left: 0;
+        }
+        
+        .btn-gold {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        
+        .btn-gold::before {
+            background: var(--gold);
+        }
+        
+        .btn-solid {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--black);
+        }
+        
+        .btn-solid::before {
+            background: var(--cream);
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0;
+            animation: fadeIn 1s var(--ease-out-expo) 1.2s forwards;
+        }
+        
+        .scroll-indicator span {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--light-gray);
+        }
+        
+        .scroll-line {
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, var(--gold), transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes scrollPulse {
+            0%, 100% { transform: scaleY(0.5); opacity: 0.5; }
+            50% { transform: scaleY(1); opacity: 1; }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Marquee */
+        .marquee {
+            background: var(--gold);
+            color: var(--black);
+            padding: 1rem 0;
+            overflow: hidden;
+        }
+        
+        .marquee-track {
+            display: flex;
+            animation: marquee 20s linear infinite;
+        }
+        
+        .marquee-content {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            padding-right: 3rem;
+        }
+        
+        .marquee-content span {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        
+        .marquee-content .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--black);
+            border-radius: 50%;
+        }
+        
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 8rem 3rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 0.9;
+        }
+        
+        .section-header p {
+            font-family: var(--font-serif);
+            font-size: 1.125rem;
+            font-style: italic;
+            color: var(--light-gray);
+            margin-top: 1rem;
+        }
+        
+        /* About Section */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .about-text h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1;
+            margin-bottom: 2rem;
+        }
+        
+        .about-text p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--light-gray);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text .highlight {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--gold);
+            display: block;
+            margin: 2rem 0;
+        }
+        
+        .about-image {
+            position: relative;
+            height: 600px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.6s var(--ease-out-expo);
+        }
+        
+        .about-image:hover img {
+            filter: grayscale(0%);
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid var(--gold);
+            z-index: -1;
+        }
+        
+        /* Products Section */
+        .products {
+            background: var(--off-black);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .product-card {
+            position: relative;
+            overflow: hidden;
+            background: var(--dark-gray);
+            cursor: pointer;
+            transition: transform 0.3s var(--ease-out-expo);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--gold);
+            color: var(--black);
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.75rem;
+            z-index: 10;
+        }
+        
+        .product-image {
+            position: relative;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            background: var(--gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s var(--ease-out-expo);
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+        
+        .product-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+        
+        .product-quick-add {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            opacity: 0;
+            transition: all 0.4s var(--ease-out-expo);
+        }
+        
+        .product-card:hover .product-quick-add {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-category {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-name {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-price {
+            font-size: 1rem;
+            color: var(--light-gray);
+        }
+        
+        /* Size Guide */
+        .size-chart {
+            max-width: 800px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+        
+        .size-chart table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .size-chart th,
+        .size-chart td {
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid var(--gray);
+        }
+        
+        .size-chart th {
+            background: var(--gold);
+            color: var(--black);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+        }
+        
+        .size-chart td {
+            background: var(--dark-gray);
+        }
+        
+        /* Contact Section */
+        .contact {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .form-group.full {
+            grid-column: span 2;
+        }
+        
+        .form-group label {
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--light-gray);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 1rem;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            border: 1px solid var(--gray);
+            background: var(--dark-gray);
+            color: var(--cream);
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--gold);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Newsletter */
+        .newsletter {
+            padding: 8rem 3rem;
+            background: var(--gold);
+            color: var(--black);
+            text-align: center;
+        }
+        
+        .newsletter h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+        }
+        
+        .newsletter p {
+            font-family: var(--font-serif);
+            font-size: 1.125rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            border: 2px solid var(--black);
+            background: transparent;
+            color: var(--black);
+            outline: none;
+        }
+        
+        .newsletter-form input::placeholder {
+            color: rgba(0,0,0,0.5);
+        }
+        
+        .newsletter-form button {
+            padding: 1rem 2rem;
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            border: 2px solid var(--black);
+            background: var(--black);
+            color: var(--gold);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .newsletter-form button:hover {
+            background: transparent;
+            color: var(--black);
+        }
+        
+        .newsletter-success {
+            display: none;
+            color: var(--black);
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 6rem 3rem 3rem;
+            background: var(--black);
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 4rem;
+            max-width: 1400px;
+            margin: 0 auto 4rem;
+        }
+        
+        .footer-brand {
+            max-width: 300px;
+        }
+        
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-brand p {
+            font-size: 0.875rem;
+            color: var(--light-gray);
+            line-height: 1.7;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .footer-social a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: rgba(201, 162, 39, 0.1);
+        }
+        
+        .footer-column h4 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-column a {
+            color: var(--light-gray);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: var(--gold);
+        }
+        
+        .footer-bottom {
+            padding-top: 3rem;
+            border-top: 1px solid var(--gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .footer-bottom p {
+            font-size: 0.75rem;
+            color: var(--light-gray);
+        }
+        
+        .footer-bottom a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-bottom a:hover {
+            color: var(--gold);
+        }
+        
+        .footer-payments {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .footer-payments span {
+            font-size: 0.65rem;
+            padding: 0.25rem 0.5rem;
+            border: 1px solid var(--gray);
+            color: var(--light-gray);
+        }
+        
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .modal-overlay.active {
+            display: flex;
+        }
+        
+        .modal {
+            background: var(--dark-gray);
+            max-width: 500px;
+            width: 100%;
+            padding: 3rem;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: var(--cream);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .modal-close:hover {
+            color: var(--gold);
+        }
+        
+        .modal h3 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .modal p {
+            color: var(--light-gray);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--dark-gray);
+            border: 1px solid var(--gold);
+            padding: 1rem 2rem;
+            z-index: 10001;
+            display: none;
+            align-items: center;
+            gap: 1rem;
+            animation: slideIn 0.3s var(--ease-out-expo);
+        }
+        
+        .toast.active {
+            display: flex;
+        }
+        
+        .toast.success {
+            border-color: var(--success);
+        }
+        
+        .toast.error {
+            border-color: var(--error);
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        /* Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 1s var(--ease-out-expo);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .about {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+            
+            .about-image {
+                height: 400px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-group.full {
+                grid-column: span 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .mobile-menu {
+                display: flex;
+            }
+            
+            section {
+                padding: 5rem 1.5rem;
+            }
+            
+            .hero-content {
+                padding: 1rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .newsletter {
+                padding: 5rem 1.5rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            footer {
+                padding: 4rem 1.5rem 2rem;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .modal {
+                padding: 2rem;
+            }
+            
+            .toast {
+                left: 1rem;
+                right: 1rem;
+                bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="/" class="nav-logo">THC</a>
+        <ul class="nav-links">
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#sizing">Size Guide</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="nav-cart" onclick="openCart()">
+                <a href="javascript:void(0)">Cart</a>
+                <span class="cart-count" id="cart-count">0</span>
+            </li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#shop" onclick="closeMobileMenu()">Shop</a>
+        <a href="#about" onclick="closeMobileMenu()">About</a>
+        <a href="#sizing" onclick="closeMobileMenu()">Size Guide</a>
+        <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+        <a href="javascript:void(0)" onclick="openCart(); closeMobileMenu()">Cart</a>
+    </div>
+    
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <p class="hero-tagline">Est. 2024 • Premium Streetwear</p>
+            <h1 class="hero-title">
+                <span>TOO</span>
+                <span class="outline">HUMBLE</span>
+                <span>COUTURE</span>
+            </h1>
+            <p class="hero-subtitle">For those who need everyone to know just how humble they are.</p>
+            <div class="hero-cta">
+                <a href="#shop" class="btn btn-gold">Shop Now</a>
+                <a href="#about" class="btn">Our Story</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+    
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>Obviously Humble</span>
+                <div class="dot"></div>
+                <span>Effortlessly Modest</span>
+                <div class="dot"></div>
+                <span>Clearly Unassuming</span>
+                <div class="dot"></div>
+                <span>Visibly Grounded</span>
+                <div class="dot"></div>
+                <span>Extremely Lowkey</span>
+                <div class="dot"></div>
+                <span>Noticeably Meek</span>
+                <div class="dot"></div>
+            </div>
+            <div class="marquee-content">
+                <span>Obviously Humble</span>
+                <div class="dot"></div>
+                <span>Effortlessly Modest</span>
+                <div class="dot"></div>
+                <span>Clearly Unassuming</span>
+                <div class="dot"></div>
+                <span>Visibly Grounded</span>
+                <div class="dot"></div>
+                <span>Extremely Lowkey</span>
+                <div class="dot"></div>
+                <span>Noticeably Meek</span>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- About Section -->
+    <section id="about">
+        <div class="about reveal">
+            <div class="about-text">
+                <h2>THE PHILOSOPHY</h2>
+                <p>In a world of loud flexes and obvious wealth displays, true style speaks with quiet confidence—or does it?</p>
+                <span class="highlight">"The loudest statement is claiming you have nothing to prove."</span>
+                <p>Too Humble Couture is for those self-aware individuals who understand the irony. The ones who can laugh at themselves while looking absolutely incredible doing it. Premium fabrics. Elevated cuts. A wink at the culture.</p>
+                <p>Because nothing says "I don't need validation" quite like wearing it on a $85 hoodie.</p>
+                <a href="#shop" class="btn" style="margin-top: 2rem;">Explore Collection</a>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=800&q=80" alt="Too Humble Couture Lifestyle">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Products Section -->
+    <section class="products" id="shop">
+        <div class="section-header reveal">
+            <h2>THE COLLECTION</h2>
+            <p>Carefully curated pieces for the obviously humble</p>
+        </div>
+        
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card reveal" data-product="very-humble-tee">
+                <span class="product-badge">Bestseller</span>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80" alt="Very Humble Oversized Tee">
+                    <div class="product-overlay"></div>
+                    <div class="product-quick-add">
+                        <button class="btn" onclick="addToCart('very-humble-tee', 'VERY HUMBLE Oversized Tee', 48)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Essentials</p>
+                    <h3 class="product-name">"VERY HUMBLE" OVERSIZED TEE</h3>
+                    <p class="product-price">$48.00</p>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card reveal" data-product="not-bragging-hoodie">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80" alt="Not Bragging Premium Hoodie">
+                    <div class="product-overlay"></div>
+                    <div class="product-quick-add">
+                        <button class="btn" onclick="addToCart('not-bragging-hoodie', 'NOT BRAGGING Premium Hoodie', 85)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Outerwear</p>
+                    <h3 class="product-name">"I'M NOT BRAGGING" PREMIUM HOODIE</h3>
+                    <p class="product-price">$85.00</p>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card reveal" data-product="lowkey-cap">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&q=80" alt="Lowkey Dad Cap">
+                    <div class="product-overlay"></div>
+                    <div class="product-quick-add">
+                        <button class="btn" onclick="addToCart('lowkey-cap', 'LOWKEY Dad Cap', 38)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Accessories</p>
+                    <h3 class="product-name">"LOWKEY" DAD CAP</h3>
+                    <p class="product-price">$38.00</p>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card reveal" data-product="zero-ego-joggers">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600&q=80" alt="Zero Ego Joggers">
+                    <div class="product-overlay"></div>
+                    <div class="product-quick-add">
+                        <button class="btn" onclick="addToCart('zero-ego-joggers', 'ZERO EGO Joggers', 72)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Bottoms</p>
+                    <h3 class="product-name">"ZERO EGO" JOGGERS</h3>
+                    <p class="product-price">$72.00</p>
+                </div>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="product-card reveal" data-product="effortlessly-modest-crew">
+                <span class="product-badge">New</span>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=600&q=80" alt="Effortlessly Modest Crewneck">
+                    <div class="product-overlay"></div>
+                    <div class="product-quick-add">
+                        <button class="btn" onclick="addToCart('effortlessly-modest-crew', 'EFFORTLESSLY MODEST Crewneck', 68)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Outerwear</p>
+                    <h3 class="product-name">"EFFORTLESSLY MODEST" CREWNECK</h3>
+                    <p class="product-price">$68.00</p>
+                </div>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="product-card reveal" data-product="thc-logo-tee">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80" alt="THC Logo Tee">
+                    <div class="product-overlay"></div>
+                    <div class="product-quick-add">
+                        <button class="btn" onclick="addToCart('thc-logo-tee', 'THC Logo Tee', 45)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Essentials</p>
+                    <h3 class="product-name">THC LOGO TEE</h3>
+                    <p class="product-price">$45.00</p>
+                </div>
+            </div>
+            
+            <!-- Product 7 -->
+            <div class="product-card reveal" data-product="self-made-hoodie">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600&q=80" alt="Self Made Hoodie">
+                    <div class="product-overlay"></div>
+                    <div class="product-quick-add">
+                        <button class="btn" onclick="addToCart('self-made-hoodie', 'SELF MADE (With Help) Hoodie', 85)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Outerwear</p>
+                    <h3 class="product-name">"SELF MADE (WITH HELP)" HOODIE</h3>
+                    <p class="product-price">$85.00</p>
+                </div>
+            </div>
+            
+            <!-- Product 8 -->
+            <div class="product-card reveal" data-product="humble-elite-tee">
+                <span class="product-badge">Limited</span>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80" alt="Humble Elite Tee">
+                    <div class="product-overlay"></div>
+                    <div class="product-quick-add">
+                        <button class="btn" onclick="addToCart('humble-elite-tee', 'HUMBLE ELITE Tee', 52)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Limited Edition</p>
+                    <h3 class="product-name">"HUMBLE ELITE" TEE</h3>
+                    <p class="product-price">$52.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Size Guide -->
+    <section id="sizing">
+        <div class="section-header reveal">
+            <h2>SIZE GUIDE</h2>
+            <p>Find your perfect humble fit</p>
+        </div>
+        
+        <div class="size-chart reveal">
+            <h3 style="font-family: var(--font-display); margin-bottom: 1.5rem; text-align: center;">T-SHIRTS & HOODIES</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Size</th>
+                        <th>Chest (in)</th>
+                        <th>Length (in)</th>
+                        <th>Sleeve (in)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>S</td><td>36-38</td><td>27</td><td>8</td></tr>
+                    <tr><td>M</td><td>39-41</td><td>28</td><td>8.5</td></tr>
+                    <tr><td>L</td><td>42-44</td><td>29</td><td>9</td></tr>
+                    <tr><td>XL</td><td>45-47</td><td>30</td><td>9.5</td></tr>
+                    <tr><td>2XL</td><td>48-50</td><td>31</td><td>10</td></tr>
+                </tbody>
+            </table>
+            
+            <h3 style="font-family: var(--font-display); margin: 3rem 0 1.5rem; text-align: center;">JOGGERS</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Size</th>
+                        <th>Waist (in)</th>
+                        <th>Inseam (in)</th>
+                        <th>Hip (in)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>S</td><td>28-30</td><td>29</td><td>38-40</td></tr>
+                    <tr><td>M</td><td>31-33</td><td>30</td><td>41-43</td></tr>
+                    <tr><td>L</td><td>34-36</td><td>31</td><td>44-46</td></tr>
+                    <tr><td>XL</td><td>37-39</td><td>32</td><td>47-49</td></tr>
+                    <tr><td>2XL</td><td>40-42</td><td>32</td><td>50-52</td></tr>
+                </tbody>
+            </table>
+            
+            <p style="text-align: center; margin-top: 2rem; color: var(--light-gray); font-size: 0.875rem;">
+                Our pieces are designed with an oversized fit. For a more fitted look, size down. Need help? <a href="#contact" style="color: var(--gold);">Contact us</a>
+            </p>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" style="background: var(--off-black);">
+        <div class="section-header reveal">
+            <h2>GET IN TOUCH</h2>
+            <p>Questions, collaborations, or just want to chat?</p>
+        </div>
+        
+        <div class="contact reveal">
+            <form class="contact-form" id="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject">
+                        <option value="general">General Inquiry</option>
+                        <option value="order">Order Question</option>
+                        <option value="collab">Collaboration</option>
+                        <option value="wholesale">Wholesale</option>
+                        <option value="press">Press</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="What's on your mind?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-gold" style="justify-self: start;">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <h2>JOIN THE HUMBLE ELITE</h2>
+        <p>Be the first to know about drops. No bragging, we promise.</p>
+        <form class="newsletter-form" id="newsletter-form" action="https://app.kit.com/forms/YOUR_FORM_ID/subscriptions" method="post">
+            <input type="email" name="email_address" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <p class="newsletter-success" id="newsletter-success">Thanks for joining! You're officially part of the Humble Elite.</p>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3 class="footer-logo">TOO HUMBLE COUTURE</h3>
+                <p>Premium streetwear for those self-aware enough to laugh at themselves—and stylish enough to do it in elevated fits.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/toohumblecouture" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+                    <a href="https://tiktok.com/@toohumblecouture" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+                    <a href="https://twitter.com/toohumbleco" target="_blank" rel="noopener" aria-label="Twitter">X</a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#shop">All Products</a></li>
+                    <li><a href="#shop">Tees</a></li>
+                    <li><a href="#shop">Hoodies</a></li>
+                    <li><a href="#shop">Accessories</a></li>
+                    <li><a href="#sizing">Size Guide</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Info</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="shipping.html">Shipping</a></li>
+                    <li><a href="returns.html">Returns</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="returns.html">Refund Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2024 Too Humble Couture. All rights reserved. Stay humble, obviously.</p>
+            <div class="footer-payments">
+                <span>VISA</span>
+                <span>MC</span>
+                <span>AMEX</span>
+                <span>PAYPAL</span>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Cart Modal -->
+    <div class="modal-overlay" id="cart-modal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeCart()">×</button>
+            <h3>YOUR CART</h3>
+            <div id="cart-items">
+                <p style="color: var(--light-gray);">Your cart is empty. Time to get humble.</p>
+            </div>
+            <div id="cart-total" style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--gray); display: none;">
+                <p style="display: flex; justify-content: space-between; font-size: 1.125rem; margin-bottom: 1rem;">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </p>
+                <p style="color: var(--light-gray); font-size: 0.875rem; margin-bottom: 1.5rem;">Shipping calculated at checkout</p>
+                <a href="https://too-humble-couture.printify.me" target="_blank" class="btn btn-solid" style="width: 100%; text-align: center;">Checkout</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span id="toast-message">Item added to cart!</span>
+    </div>
+    
+    <script>
+        // Cart functionality
+        let cart = [];
+        
+        function addToCart(id, name, price) {
+            const existingItem = cart.find(item => item.id === id);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({ id, name, price, quantity: 1 });
+            }
+            updateCartUI();
+            showToast('Added to cart: ' + name);
+        }
+        
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            updateCartUI();
+        }
+        
+        function updateCartUI() {
+            const cartCount = document.getElementById('cart-count');
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            const cartSubtotal = document.getElementById('cart-subtotal');
+            
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = totalItems;
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p style="color: var(--light-gray);">Your cart is empty. Time to get humble.</p>';
+                cartTotal.style.display = 'none';
+            } else {
+                cartItems.innerHTML = cart.map(item => `
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--gray);">
+                        <div>
+                            <p style="font-weight: 500;">${item.name}</p>
+                            <p style="color: var(--light-gray); font-size: 0.875rem;">Qty: ${item.quantity}</p>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span>$${(item.price * item.quantity).toFixed(2)}</span>
+                            <button onclick="removeFromCart('${item.id}')" style="background: none; border: none; color: var(--light-gray); cursor: pointer; font-size: 1.25rem;">×</button>
+                        </div>
+                    </div>
+                `).join('');
+                
+                const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                cartSubtotal.textContent = '$' + subtotal.toFixed(2);
+                cartTotal.style.display = 'block';
+            }
+        }
+        
+        function openCart() {
+            document.getElementById('cart-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeCart() {
+            document.getElementById('cart-modal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            toastMessage.textContent = message;
+            toast.classList.add('active');
+            setTimeout(() => {
+                toast.classList.remove('active');
+            }, 3000);
+        }
+        
+        // Close modal on outside click
+        document.getElementById('cart-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeCart();
+        });
+        
+        // Mobile menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        function closeMobileMenu() {
+            menuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Scroll reveal
+        const reveals = document.querySelectorAll('.reveal');
+        
+        function revealOnScroll() {
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const revealTop = el.getBoundingClientRect().top;
+                const revealPoint = 150;
+                
+                if (revealTop < windowHeight - revealPoint) {
+                    el.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+        
+        // Form handlers
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            // In production, this would send to your backend
+            showToast('Message sent! We\'ll get back to you soon.');
+            this.reset();
+        });
+        
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            // This would integrate with Kit in production
+            this.style.display = 'none';
+            document.getElementById('newsletter-success').style.display = 'block';
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href !== 'javascript:void(0)') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

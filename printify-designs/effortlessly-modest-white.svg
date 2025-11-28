@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 3000" width="3000" height="3000">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap');
+      .main-text { font-family: 'Bebas Neue', Arial, sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- Transparent background for print -->
+  <rect width="3000" height="3000" fill="none"/>
+  
+  <!-- Top decorative element -->
+  <text x="1500" y="1000" text-anchor="middle" font-family="Georgia, serif" fill="#C9A227" font-size="100" font-style="italic">~</text>
+  
+  <!-- EFFORTLESSLY -->
+  <text x="1500" y="1300" text-anchor="middle" class="main-text" fill="#FFFFFF" font-size="300" letter-spacing="35">EFFORTLESSLY</text>
+  
+  <!-- MODEST -->
+  <text x="1500" y="1700" text-anchor="middle" class="main-text" fill="#FFFFFF" font-size="420" letter-spacing="30">MODEST</text>
+  
+  <!-- Bottom decorative element -->
+  <text x="1500" y="2000" text-anchor="middle" font-family="Georgia, serif" fill="#C9A227" font-size="100" font-style="italic">~</text>
+  
+  <!-- Brand -->
+  <text x="1500" y="2250" text-anchor="middle" font-family="Arial, sans-serif" fill="#666666" font-size="60" letter-spacing="15">THC</text>
+</svg>

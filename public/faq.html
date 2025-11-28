@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Too Humble Couture FAQ - Frequently asked questions about our products, orders, shipping, and returns.">
+    <title>FAQ | Too Humble Couture</title>
+    <link rel="canonical" href="https://toohumblecouture.com/faq.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --off-black: #141414;
+            --dark-gray: #1a1a1a;
+            --gray: #2a2a2a;
+            --light-gray: #888;
+            --cream: #f5f0e8;
+            --gold: #c9a227;
+            --font-display: 'Bebas Neue', sans-serif;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'DM Sans', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font-sans);
+            background: var(--black);
+            color: var(--cream);
+            line-height: 1.8;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 3rem;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            letter-spacing: 0.2em;
+            color: var(--cream);
+            text-decoration: none;
+        }
+        .nav-back {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+        .legal-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+        h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            color: var(--light-gray);
+            font-size: 1rem;
+            margin-bottom: 3rem;
+        }
+        h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin: 3rem 0 1.5rem;
+            letter-spacing: 0.05em;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--gray);
+            padding: 1.5rem 0;
+        }
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.125rem;
+            margin-bottom: 0.75rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question::after {
+            content: '+';
+            color: var(--gold);
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            color: var(--light-gray);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        .faq-answer p { margin-bottom: 0.75rem; }
+        .faq-answer ul { margin: 0.5rem 0 0.5rem 1.5rem; }
+        .faq-answer li { margin-bottom: 0.25rem; }
+        a { color: var(--gold); }
+        .contact-cta {
+            background: var(--dark-gray);
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+            border: 1px solid var(--gray);
+        }
+        .contact-cta h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .contact-cta p { color: var(--light-gray); margin-bottom: 1rem; }
+        .contact-cta a {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: var(--gold);
+            color: var(--black);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+        .contact-cta a:hover { background: var(--cream); }
+        footer {
+            text-align: center;
+            padding: 3rem;
+            border-top: 1px solid var(--gray);
+            margin-top: 4rem;
+        }
+        footer p { font-size: 0.75rem; color: var(--light-gray); }
+        @media (max-width: 768px) {
+            nav { padding: 1rem 1.5rem; }
+            .legal-container { padding: 6rem 1.5rem 3rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="nav-logo">THC</a>
+        <a href="/" class="nav-back">← Back to Shop</a>
+    </nav>
+    
+    <main class="legal-container">
+        <h1>FREQUENTLY ASKED QUESTIONS</h1>
+        <p class="subtitle">Got questions? We've got (humble) answers.</p>
+        
+        <h2>ORDERS & PRODUCTS</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">What makes Too Humble Couture different?</div>
+            <div class="faq-answer">
+                <p>We're a tongue-in-cheek streetwear brand for self-aware individuals who appreciate irony. Our pieces let you broadcast your humility while looking effortlessly stylish. It's premium streetwear with a wink at the culture.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">What is print-on-demand?</div>
+            <div class="faq-answer">
+                <p>Print-on-demand means each item is made just for you after you order. This allows us to offer a wide variety of designs without waste. The tradeoff is slightly longer delivery times (production + shipping), but you get a freshly made product every time.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">What's the quality like?</div>
+            <div class="faq-answer">
+                <p>We use premium blank apparel from trusted brands. Our t-shirts are soft, pre-shrunk cotton or cotton blends. Hoodies feature heavyweight fleece with quality construction. We print using high-quality direct-to-garment (DTG) printing for vibrant, durable designs.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">How do I care for my items?</div>
+            <div class="faq-answer">
+                <p>To keep your THC pieces looking fresh:</p>
+                <ul>
+                    <li>Machine wash cold, inside out</li>
+                    <li>Use mild detergent</li>
+                    <li>Tumble dry low or hang dry</li>
+                    <li>Do not iron directly on the print</li>
+                    <li>Do not bleach or dry clean</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">How do I choose the right size?</div>
+            <div class="faq-answer">
+                <p>Check our <a href="/#sizing">Size Guide</a> for detailed measurements. Our pieces are designed with an oversized fit—if you prefer a more fitted look, consider sizing down. When in doubt, contact us!</p>
+            </div>
+        </div>
+        
+        <h2>SHIPPING & DELIVERY</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">How long will my order take?</div>
+            <div class="faq-answer">
+                <p>Total delivery time = Production (2-5 business days) + Shipping (3-7 business days for US). Most US orders arrive within 7-14 business days. International orders may take longer. See our full <a href="shipping.html">Shipping Information</a>.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Do you ship internationally?</div>
+            <div class="faq-answer">
+                <p>Yes! We ship to most countries worldwide. International shipping times vary (typically 10-30 business days). Note that international orders may be subject to customs duties and import taxes, which are the recipient's responsibility.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Where is my order?</div>
+            <div class="faq-answer">
+                <p>Once your order ships, you'll receive an email with tracking information. If you haven't received this email, check your spam folder. Still can't find it? Contact us at <a href="mailto:support@toohumblecouture.com">support@toohumblecouture.com</a> with your order number.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Can I change my shipping address?</div>
+            <div class="faq-answer">
+                <p>If your order hasn't entered production yet, we may be able to update the address. Contact us immediately at <a href="mailto:support@toohumblecouture.com">support@toohumblecouture.com</a>. Once shipped, we cannot redirect packages.</p>
+            </div>
+        </div>
+        
+        <h2>RETURNS & REFUNDS</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">What's your return policy?</div>
+            <div class="faq-answer">
+                <p>Because items are made-to-order, we can only accept returns for defective or damaged items, or if we made an error. Please contact us within 7 days of receiving your order with photos of any issues. See our full <a href="returns.html">Returns Policy</a>.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">My item arrived damaged—what do I do?</div>
+            <div class="faq-answer">
+                <p>We're sorry to hear that! Please email <a href="mailto:returns@toohumblecouture.com">returns@toohumblecouture.com</a> within 7 days with your order number and photos of the damage. We'll make it right with a replacement or full refund.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Can I cancel my order?</div>
+            <div class="faq-answer">
+                <p>Orders can be cancelled within 2 hours of placing them. After that, if production hasn't started, we may still be able to help. Contact us immediately at <a href="mailto:support@toohumblecouture.com">support@toohumblecouture.com</a>. Once in production, cancellation isn't possible.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Do you offer exchanges?</div>
+            <div class="faq-answer">
+                <p>We don't offer direct exchanges. If you need a different size, you can return the original item (if eligible) and place a new order. This ensures the fastest processing.</p>
+            </div>
+        </div>
+        
+        <h2>PAYMENT & PRICING</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">What payment methods do you accept?</div>
+            <div class="faq-answer">
+                <p>We accept all major credit cards (Visa, Mastercard, American Express, Discover), PayPal, and other payment methods available at checkout. All transactions are secure and encrypted.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Are prices in USD?</div>
+            <div class="faq-answer">
+                <p>Yes, all prices are listed in US Dollars (USD). Your payment provider will convert to your local currency if needed.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Do you offer discounts or sales?</div>
+            <div class="faq-answer">
+                <p>We occasionally offer promotions and discounts. Sign up for our newsletter to be the first to know about sales and exclusive drops. Follow us on social media for surprise promotions!</p>
+            </div>
+        </div>
+        
+        <h2>OTHER QUESTIONS</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">Do you do collaborations?</div>
+            <div class="faq-answer">
+                <p>We love working with creators, influencers, and brands that align with our vibe. For collaboration inquiries, email us at <a href="mailto:collab@toohumblecouture.com">collab@toohumblecouture.com</a> with your proposal.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Are you on social media?</div>
+            <div class="faq-answer">
+                <p>Yes! Follow us for new drops, behind-the-scenes content, and humble flexes:</p>
+                <ul>
+                    <li>Instagram: <a href="https://instagram.com/toohumblecouture" target="_blank">@toohumblecouture</a></li>
+                    <li>TikTok: <a href="https://tiktok.com/@toohumblecouture" target="_blank">@toohumblecouture</a></li>
+                    <li>Twitter/X: <a href="https://twitter.com/toohumbleco" target="_blank">@toohumbleco</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Is "THC" intentional?</div>
+            <div class="faq-answer">
+                <p>Our initials spell THC. We're aware. It's part of the ironic, tongue-in-cheek nature of the brand. We're Too Humble Couture—nothing more, nothing less. 😉</p>
+            </div>
+        </div>
+        
+        <div class="contact-cta">
+            <h3>Still Have Questions?</h3>
+            <p>We're here to help (humbly, of course).</p>
+            <a href="/#contact">Contact Us</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2024 Too Humble Couture. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(other => {
+                    if (other !== item) other.classList.remove('active');
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

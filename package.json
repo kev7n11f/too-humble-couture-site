@@ -1,0 +1,12 @@
+{
+  "name": "too-humble-couture",
+  "version": "1.0.0",
+  "description": "Too Humble Couture - Premium streetwear for the obviously humble",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'",
+    "start": "npx serve public"
+  },
+  "keywords": ["streetwear", "fashion", "humble", "clothing"],
+  "author": "Too Humble Couture",
+  "license": "PROPRIETARY"
+}

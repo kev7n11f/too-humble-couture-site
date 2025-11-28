@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 3500" width="3000" height="3500">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap');
+      .main-text { font-family: 'Bebas Neue', Arial, sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- Transparent background for print -->
+  <rect width="3000" height="3500" fill="none"/>
+  
+  <!-- SELF -->
+  <text x="1500" y="1250" text-anchor="middle" class="main-text" fill="#FFFFFF" font-size="500" letter-spacing="50">SELF</text>
+  
+  <!-- MADE -->
+  <text x="1500" y="1750" text-anchor="middle" class="main-text" fill="#FFFFFF" font-size="500" letter-spacing="50">MADE</text>
+  
+  <!-- Gold accent line -->
+  <line x1="700" y1="1900" x2="2300" y2="1900" stroke="#C9A227" stroke-width="6"/>
+  
+  <!-- (with help) in smaller italic -->
+  <text x="1500" y="2150" text-anchor="middle" font-family="Georgia, serif" fill="#C9A227" font-size="140" font-style="italic">(with help)</text>
+  
+  <!-- Brand mark -->
+  <text x="1500" y="2500" text-anchor="middle" font-family="Arial, sans-serif" fill="#555555" font-size="60" letter-spacing="15">TOO HUMBLE COUTURE</text>
+</svg>

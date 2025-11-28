@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 3000" width="3000" height="3000">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap');
+      .main-text { font-family: 'Bebas Neue', Arial, sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- Transparent background for print -->
+  <rect width="3000" height="3000" fill="none"/>
+  
+  <!-- Main Text -->
+  <text x="1500" y="1350" text-anchor="middle" class="main-text" fill="#FFFFFF" font-size="480" letter-spacing="40">VERY</text>
+  <text x="1500" y="1800" text-anchor="middle" class="main-text" fill="#FFFFFF" font-size="480" letter-spacing="40">HUMBLE</text>
+  
+  <!-- Decorative line above -->
+  <line x1="900" y1="900" x2="2100" y2="900" stroke="#C9A227" stroke-width="8"/>
+  
+  <!-- Decorative line below -->
+  <line x1="900" y1="2000" x2="2100" y2="2000" stroke="#C9A227" stroke-width="8"/>
+  
+  <!-- Small tagline -->
+  <text x="1500" y="2200" text-anchor="middle" font-family="Arial, sans-serif" fill="#C9A227" font-size="72" letter-spacing="20">TOO HUMBLE COUTURE</text>
+</svg>

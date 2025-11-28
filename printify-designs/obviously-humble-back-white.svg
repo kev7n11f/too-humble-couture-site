@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 4000" width="3000" height="4000">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap');
+      .main-text { font-family: 'Bebas Neue', Arial, sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- Transparent background for print -->
+  <rect width="3000" height="4000" fill="none"/>
+  
+  <!-- Large O watermark -->
+  <text x="1500" y="2200" text-anchor="middle" class="main-text" fill="#FFFFFF" font-size="2400" opacity="0.05">O</text>
+  
+  <!-- OBVIOUSLY -->
+  <text x="1500" y="1500" text-anchor="middle" class="main-text" fill="#FFFFFF" font-size="360" letter-spacing="45">OBVIOUSLY</text>
+  
+  <!-- HUMBLE -->
+  <text x="1500" y="2000" text-anchor="middle" class="main-text" fill="#FFFFFF" font-size="520" letter-spacing="35">HUMBLE</text>
+  
+  <!-- Gold divider -->
+  <rect x="1100" y="2100" width="800" height="8" fill="#C9A227"/>
+  
+  <!-- Subtitle -->
+  <text x="1500" y="2350" text-anchor="middle" font-family="Georgia, serif" fill="#888888" font-size="90" font-style="italic">since always</text>
+  
+  <!-- THC at bottom -->
+  <text x="1500" y="2700" text-anchor="middle" class="main-text" fill="#C9A227" font-size="180" letter-spacing="30">THC</text>
+  
+  <!-- Brand line -->
+  <text x="1500" y="2850" text-anchor="middle" font-family="Arial, sans-serif" fill="#555555" font-size="50" letter-spacing="10">TOO HUMBLE COUTURE • EST 2024</text>
+</svg>
