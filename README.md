@@ -123,4 +123,4 @@ All legal documentation included:
 
 ---
 
-**Too Humble Couture** © 2024 | Stay humble, obviously.
+**Too Humble Couture** © 2025 | Stay humble, obviously.
