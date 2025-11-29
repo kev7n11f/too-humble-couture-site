@@ -348,7 +348,7 @@ When setting up your store, order samples to verify quality:
 
 **Priority samples to order:**
 
-1. VERY HUMBLE Tee (your bestseller)
+1. OBVIOUSLY HUMBLE Tee (your bestseller)
 2. NOT BRAGGING Hoodie (high-margin item)
 3. LOWKEY Cap (accessory check)
 4. One pair of joggers
