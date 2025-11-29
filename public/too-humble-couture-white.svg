@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 3000" width="3000" height="3000">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap');
+      .main-text { font-family: 'Bebas Neue', Arial, sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- Transparent background for print -->
+  <rect width="3000" height="3000" fill="none"/>
+  
+  <!-- Top gold line -->
+  <line x1="600" y1="950" x2="2400" y2="950" stroke="#C9A227" stroke-width="8"/>
+  
+  <!-- TOO -->
+  <text x="1500" y="1250" text-anchor="middle" class="main-text" fill="#FFFFFF" font-size="420" letter-spacing="50">TOO</text>
+  
+  <!-- HUMBLE -->
+  <text x="1500" y="1650" text-anchor="middle" class="main-text" fill="#FFFFFF" font-size="420" letter-spacing="40">HUMBLE</text>
+  
+  <!-- COUTURE -->
+  <text x="1500" y="2050" text-anchor="middle" class="main-text" fill="#FFFFFF" font-size="420" letter-spacing="35">COUTURE</text>
+  
+  <!-- Bottom gold line -->
+  <line x1="600" y1="2150" x2="2400" y2="2150" stroke="#C9A227" stroke-width="8"/>
+</svg>
