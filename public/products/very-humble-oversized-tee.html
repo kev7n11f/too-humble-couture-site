@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VERY HUMBLE Oversized Tee - Too Humble Couture speaks to the confident, ironic dresser — the person who can smirk at trends while setting them.">
+    <meta property="og:title" content="VERY HUMBLE Oversized Tee | Too Humble Couture">
+    <meta property="og:description" content="Too Humble Couture speaks to the confident, ironic dresser.">
+    <meta property="og:type" content="product">
+    <meta property="og:image" content="https://images-api.printify.com/mockup/692a168fc19490db8f0711f9/103520/100476/very-humble-oversized-tee.jpg?camera_label=person-1-front">
+    <title>"VERY HUMBLE" OVERSIZED TEE | Too Humble Couture</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --off-black: #141414;
+            --dark-gray: #1a1a1a;
+            --gray: #2a2a2a;
+            --light-gray: #888;
+            --cream: #f5f0e8;
+            --gold: #c9a227;
+            --gold-light: #e8d48a;
+            --white: #ffffff;
+            --success: #4ade80;
+            --error: #ef4444;
+            
+            --font-display: 'Bebas Neue', sans-serif;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'DM Sans', sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            background: var(--black);
+            color: var(--cream);
+            line-height: 1.6;
+        }
+        
+        a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: var(--gold-light);
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--cream);
+            letter-spacing: 0.1em;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--cream);
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        
+        /* Product Page Layout */
+        .product-page {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+        
+        .product-gallery {
+            position: sticky;
+            top: 80px;
+            height: calc(100vh - 80px);
+            background: var(--dark-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .product-gallery img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .product-details {
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .breadcrumb {
+            font-size: 0.875rem;
+            color: var(--light-gray);
+        }
+        
+        .breadcrumb a {
+            color: var(--light-gray);
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--gold);
+        }
+        
+        .product-title {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            letter-spacing: 0.05em;
+        }
+        
+        .product-price {
+            font-size: 1.5rem;
+            color: var(--gold);
+        }
+        
+        .product-description {
+            color: var(--light-gray);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        
+        /* Size Selector */
+        .size-selector {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .size-selector label {
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--light-gray);
+        }
+        
+        .size-options {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .size-option {
+            width: 50px;
+            height: 50px;
+            border: 1px solid var(--gray);
+            background: transparent;
+            color: var(--cream);
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: var(--font-sans);
+        }
+        
+        .size-option:hover,
+        .size-option.active {
+            border-color: var(--gold);
+            background: var(--gold);
+            color: var(--black);
+        }
+        
+        /* Buy Button */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: 1px solid var(--gold);
+            background: var(--gold);
+            color: var(--black);
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: var(--gold);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--gold);
+        }
+        
+        .btn-outline:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+        
+        .product-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        /* Product Features */
+        .product-features {
+            border-top: 1px solid var(--gray);
+            padding-top: 2rem;
+        }
+        
+        .product-features h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+        
+        .product-features ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .product-features li {
+            color: var(--light-gray);
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .product-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--off-black);
+            padding: 2rem 3rem;
+            text-align: center;
+            border-top: 1px solid var(--gray);
+        }
+        
+        footer p {
+            color: var(--light-gray);
+            font-size: 0.875rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .product-page {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-gallery {
+                position: relative;
+                top: 0;
+                height: 60vh;
+            }
+            
+            .product-details {
+                padding: 2rem;
+            }
+            
+            .product-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="/" class="nav-logo">TOO HUMBLE COUTURE</a>
+        <ul class="nav-links">
+            <li><a href="/#collection">Collection</a></li>
+            <li><a href="/#sizing">Size Guide</a></li>
+            <li><a href="/#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Product Page -->
+    <main class="product-page">
+        <div class="product-gallery">
+            <img src="https://images-api.printify.com/mockup/692a168fc19490db8f0711f9/103520/100476/very-humble-oversized-tee.jpg?camera_label=person-1-front" alt="VERY HUMBLE Oversized Tee">
+        </div>
+        
+        <div class="product-details">
+            <nav class="breadcrumb">
+                <a href="/">Home</a> / <a href="/#collection">Collection</a> / "VERY HUMBLE" Oversized Tee
+            </nav>
+            
+            <h1 class="product-title">"VERY HUMBLE" OVERSIZED TEE</h1>
+            
+            <p class="product-price">$29.58</p>
+            
+            <p class="product-description">
+                Too Humble Couture speaks to the confident, ironic dresser — the person who can smirk at trends while setting them. This oversized tee delivers comfort with a wink of self-aware style, perfect for those who embrace humility with tongue firmly in cheek.
+            </p>
+            
+            <div class="size-selector">
+                <label>Select Size</label>
+                <div class="size-options">
+                    <button class="size-option">S</button>
+                    <button class="size-option active">M</button>
+                    <button class="size-option">L</button>
+                    <button class="size-option">XL</button>
+                    <button class="size-option">2XL</button>
+                </div>
+            </div>
+            
+            <div class="product-actions">
+                <a href="https://too-humble-couture-thc.printify.me/product/25238500" target="_blank" rel="noopener noreferrer" class="btn">Buy Now - $29.58</a>
+                <a href="/#collection" class="btn btn-outline">Continue Shopping</a>
+            </div>
+            
+            <div class="product-features">
+                <h3>FEATURES</h3>
+                <ul>
+                    <li>Premium oversized fit</li>
+                    <li>Soft, lightweight cotton</li>
+                    <li>Ribbed crewneck collar</li>
+                    <li>Double-needle stitching</li>
+                    <li>Printed with eco-friendly inks</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Too Humble Couture. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Size selector functionality
+        document.querySelectorAll('.size-option').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.size-option').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
