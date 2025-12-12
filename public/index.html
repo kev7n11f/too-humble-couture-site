@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Too Humble Couture - Premium streetwear for those who are clearly, obviously, undeniably... too humble. Tongue-in-cheek luxury apparel.">
-    <meta name="keywords" content="streetwear, humble, luxury fashion, ironic clothing, premium apparel, too humble, THC clothing">
+    <meta name="description"
+        content="Too Humble Couture - Premium streetwear for those who are clearly, obviously, undeniably... too humble. Tongue-in-cheek luxury apparel.">
+    <meta name="keywords"
+        content="streetwear, humble, luxury fashion, ironic clothing, premium apparel, too humble, THC clothing">
     <meta property="og:title" content="Too Humble Couture | Premium Streetwear for the Obviously Humble">
     <meta property="og:description" content="For those who need everyone to know just how humble they are.">
     <meta property="og:type" content="website">
@@ -14,11 +17,17 @@
     <link rel="canonical" href="https://toohumblecouture.com">
     <link rel="icon" type="image/jpeg" href="favicon2h.jpg">
     <title>Too Humble Couture | Premium Streetwear for the Obviously Humble</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script defer src="https://umami-analytics-kohl.vercel.app/script.js"
+        data-website-id="1c6dffbd-4485-42ef-854f-c7aab41ea8a2">
+        </script>
+
     <style>
         :root {
             --black: #0a0a0a;
@@ -32,25 +41,25 @@
             --white: #ffffff;
             --success: #4ade80;
             --error: #ef4444;
-            
+
             --font-display: 'Bebas Neue', sans-serif;
             --font-serif: 'Cormorant Garamond', serif;
             --font-sans: 'DM Sans', sans-serif;
-            
+
             --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
             --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         html {
             scroll-behavior: smooth;
         }
-        
+
         body {
             font-family: var(--font-sans);
             background: var(--black);
@@ -58,12 +67,12 @@
             overflow-x: hidden;
             line-height: 1.6;
         }
-        
+
         ::selection {
             background: var(--gold);
             color: var(--black);
         }
-        
+
         /* Grain Overlay */
         .grain {
             position: fixed;
@@ -76,7 +85,7 @@
             opacity: 0.03;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
-        
+
         /* Navigation */
         nav {
             position: fixed;
@@ -93,12 +102,12 @@
             backdrop-filter: blur(10px);
             transition: all 0.3s;
         }
-        
+
         nav.scrolled {
             padding: 1rem 3rem;
             background: rgba(10, 10, 10, 0.98);
         }
-        
+
         .nav-logo {
             font-family: var(--font-display);
             font-size: 1.5rem;
@@ -107,18 +116,18 @@
             text-decoration: none;
             transition: color 0.3s;
         }
-        
+
         .nav-logo:hover {
             color: var(--gold);
         }
-        
+
         .nav-links {
             display: flex;
             gap: 3rem;
             list-style: none;
             align-items: center;
         }
-        
+
         .nav-links a {
             color: var(--cream);
             text-decoration: none;
@@ -129,7 +138,7 @@
             position: relative;
             transition: color 0.3s;
         }
-        
+
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -140,20 +149,20 @@
             background: var(--gold);
             transition: width 0.3s var(--ease-out-expo);
         }
-        
+
         .nav-links a:hover {
             color: var(--gold);
         }
-        
+
         .nav-links a:hover::after {
             width: 100%;
         }
-        
+
         .nav-cart {
             position: relative;
             cursor: pointer;
         }
-        
+
         .cart-count {
             position: absolute;
             top: -8px;
@@ -169,7 +178,7 @@
             justify-content: center;
             font-weight: 600;
         }
-        
+
         /* Mobile Menu */
         .menu-toggle {
             display: none;
@@ -179,7 +188,7 @@
             z-index: 1001;
             padding: 10px;
         }
-        
+
         .menu-toggle span {
             width: 24px;
             height: 2px;
@@ -187,19 +196,19 @@
             transition: all 0.3s;
             display: block;
         }
-        
+
         .menu-toggle.active span:nth-child(1) {
             transform: rotate(45deg) translate(6px, 6px);
         }
-        
+
         .menu-toggle.active span:nth-child(2) {
             opacity: 0;
         }
-        
+
         .menu-toggle.active span:nth-child(3) {
             transform: rotate(-45deg) translate(6px, -6px);
         }
-        
+
         .mobile-menu {
             display: none;
             position: fixed;
@@ -217,12 +226,12 @@
             pointer-events: none;
             transition: opacity 0.3s;
         }
-        
+
         .mobile-menu.active {
             opacity: 1;
             pointer-events: all;
         }
-        
+
         .mobile-menu a {
             font-family: var(--font-display);
             font-size: 2rem;
@@ -231,11 +240,11 @@
             letter-spacing: 0.1em;
             transition: color 0.3s;
         }
-        
+
         .mobile-menu a:hover {
             color: var(--gold);
         }
-        
+
         /* Hero Section */
         .hero {
             height: 100vh;
@@ -245,13 +254,13 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .hero-bg {
             position: absolute;
             inset: 0;
             background: linear-gradient(135deg, var(--black) 0%, var(--off-black) 50%, var(--dark-gray) 100%);
         }
-        
+
         .hero-bg::before {
             content: '';
             position: absolute;
@@ -262,18 +271,27 @@
             background: radial-gradient(circle, rgba(201, 162, 39, 0.03) 0%, transparent 60%);
             animation: pulse 8s ease-in-out infinite;
         }
-        
+
         @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.2); opacity: 1; }
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
         }
-        
+
         .hero-content {
             text-align: center;
             z-index: 1;
             padding: 2rem;
         }
-        
+
         .hero-tagline {
             font-family: var(--font-serif);
             font-size: clamp(0.875rem, 1.5vw, 1rem);
@@ -285,7 +303,7 @@
             opacity: 0;
             animation: fadeInUp 1s var(--ease-out-expo) 0.2s forwards;
         }
-        
+
         .hero-title {
             font-family: var(--font-display);
             font-size: clamp(4rem, 15vw, 12rem);
@@ -295,16 +313,16 @@
             opacity: 0;
             animation: fadeInUp 1s var(--ease-out-expo) 0.4s forwards;
         }
-        
+
         .hero-title span {
             display: block;
         }
-        
+
         .hero-title .outline {
             -webkit-text-stroke: 1px var(--cream);
             color: transparent;
         }
-        
+
         .hero-subtitle {
             font-family: var(--font-serif);
             font-size: clamp(1rem, 2vw, 1.5rem);
@@ -315,7 +333,7 @@
             opacity: 0;
             animation: fadeInUp 1s var(--ease-out-expo) 0.6s forwards;
         }
-        
+
         .hero-cta {
             margin-top: 3rem;
             opacity: 0;
@@ -325,7 +343,7 @@
             justify-content: center;
             flex-wrap: wrap;
         }
-        
+
         .btn {
             display: inline-block;
             padding: 1rem 3rem;
@@ -347,7 +365,7 @@
         .btn-explore {
             margin-top: 2rem;
         }
-        
+
         .btn::before {
             content: '';
             position: absolute;
@@ -359,41 +377,41 @@
             transition: left 0.4s var(--ease-out-expo);
             z-index: -1;
         }
-        
+
         .btn:hover {
             color: var(--black);
         }
-        
+
         .btn:hover::before {
             left: 0;
         }
-        
+
         .btn-gold {
             border-color: var(--gold);
             color: var(--gold);
         }
-        
+
         .btn-gold::before {
             background: var(--gold);
         }
-        
+
         .btn-solid {
             background: var(--gold);
             border-color: var(--gold);
             color: var(--black);
         }
-        
+
         .btn-solid::before {
             background: var(--cream);
         }
-        
+
         /* Utility: full width button used in modals/checkout */
         .btn-full {
             width: 100%;
             text-align: center;
             display: inline-block;
         }
-        
+
         .scroll-indicator {
             position: absolute;
             bottom: 3rem;
@@ -406,36 +424,57 @@
             opacity: 0;
             animation: fadeIn 1s var(--ease-out-expo) 1.2s forwards;
         }
-        
+
         .scroll-indicator span {
             font-size: 0.65rem;
             letter-spacing: 0.2em;
             text-transform: uppercase;
             color: var(--light-gray);
         }
-        
+
         .scroll-line {
             width: 1px;
             height: 60px;
             background: linear-gradient(to bottom, var(--gold), transparent);
             animation: scrollPulse 2s ease-in-out infinite;
         }
-        
+
         @keyframes scrollPulse {
-            0%, 100% { transform: scaleY(0.5); opacity: 0.5; }
-            50% { transform: scaleY(1); opacity: 1; }
+
+            0%,
+            100% {
+                transform: scaleY(0.5);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scaleY(1);
+                opacity: 1;
+            }
         }
-        
+
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
-        
+
         /* Marquee */
         .marquee {
             background: var(--gold);
@@ -443,12 +482,12 @@
             padding: 1rem 0;
             overflow: hidden;
         }
-        
+
         .marquee-track {
             display: flex;
             animation: marquee 20s linear infinite;
         }
-        
+
         .marquee-content {
             flex-shrink: 0;
             display: flex;
@@ -456,7 +495,7 @@
             gap: 3rem;
             padding-right: 3rem;
         }
-        
+
         .marquee-content span {
             font-family: var(--font-display);
             font-size: 1rem;
@@ -464,35 +503,40 @@
             text-transform: uppercase;
             white-space: nowrap;
         }
-        
+
         .marquee-content .dot {
             width: 6px;
             height: 6px;
             background: var(--black);
             border-radius: 50%;
         }
-        
+
         @keyframes marquee {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
         }
-        
+
         /* Section Styling */
         section {
             padding: 8rem 3rem;
         }
-        
+
         .section-header {
             text-align: center;
             margin-bottom: 5rem;
         }
-        
+
         .section-header h2 {
             font-family: var(--font-display);
             font-size: clamp(3rem, 8vw, 6rem);
             line-height: 0.9;
         }
-        
+
         .section-header p {
             font-family: var(--font-serif);
             font-size: 1.125rem;
@@ -500,7 +544,7 @@
             color: var(--light-gray);
             margin-top: 1rem;
         }
-        
+
         /* About Section */
         .about {
             display: grid;
@@ -510,21 +554,21 @@
             max-width: 1400px;
             margin: 0 auto;
         }
-        
+
         .about-text h2 {
             font-family: var(--font-display);
             font-size: clamp(2.5rem, 5vw, 4rem);
             line-height: 1;
             margin-bottom: 2rem;
         }
-        
+
         .about-text p {
             font-size: 1rem;
             line-height: 1.8;
             color: var(--light-gray);
             margin-bottom: 1.5rem;
         }
-        
+
         .about-text .highlight {
             font-family: var(--font-serif);
             font-size: 1.5rem;
@@ -533,12 +577,12 @@
             display: block;
             margin: 2rem 0;
         }
-        
+
         .about-image {
             position: relative;
             height: 600px;
         }
-        
+
         .about-image img,
         .about-image video {
             width: 100%;
@@ -547,12 +591,12 @@
             filter: grayscale(100%);
             transition: filter 0.6s var(--ease-out-expo);
         }
-        
+
         .about-image:hover img,
         .about-image:hover video {
             filter: grayscale(0%);
         }
-        
+
         .about-image::before {
             content: '';
             position: absolute;
@@ -563,13 +607,13 @@
             border: 1px solid var(--gold);
             z-index: -1;
         }
-        
+
         /* Video Showcase */
         .video-showcase {
             background: var(--dark-gray);
             padding: 6rem 3rem;
         }
-        
+
         .video-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -577,42 +621,42 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .video-card {
             position: relative;
             overflow: hidden;
             border: 1px solid var(--gray);
         }
-        
+
         .video-card video {
             width: 100%;
             display: block;
         }
-        
+
         .video-caption {
             padding: 1rem;
             text-align: center;
             background: var(--off-black);
         }
-        
+
         .video-caption h4 {
             font-family: var(--font-display);
             font-size: 1rem;
             letter-spacing: 0.1em;
             color: var(--gold);
         }
-        
+
         @media (max-width: 768px) {
             .video-grid {
                 grid-template-columns: 1fr;
             }
         }
-        
+
         /* Products Section */
         .products {
             background: var(--off-black);
         }
-        
+
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -620,7 +664,7 @@
             max-width: 1400px;
             margin: 0 auto;
         }
-        
+
         .product-card {
             position: relative;
             overflow: hidden;
@@ -628,11 +672,11 @@
             cursor: pointer;
             transition: transform 0.3s var(--ease-out-expo);
         }
-        
+
         .product-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .product-badge {
             position: absolute;
             top: 1rem;
@@ -646,7 +690,7 @@
             padding: 0.25rem 0.75rem;
             z-index: 10;
         }
-        
+
         .product-image {
             position: relative;
             aspect-ratio: 3/4;
@@ -656,30 +700,30 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .product-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.8s var(--ease-out-expo);
         }
-        
+
         .product-card:hover .product-image img {
             transform: scale(1.1);
         }
-        
+
         .product-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 50%);
             opacity: 0;
             transition: opacity 0.4s;
         }
-        
+
         .product-card:hover .product-overlay {
             opacity: 1;
         }
-        
+
         .product-quick-add {
             position: absolute;
             bottom: 1.5rem;
@@ -688,16 +732,16 @@
             opacity: 0;
             transition: all 0.4s var(--ease-out-expo);
         }
-        
+
         .product-card:hover .product-quick-add {
             transform: translateX(-50%) translateY(0);
             opacity: 1;
         }
-        
+
         .product-info {
             padding: 1.5rem;
         }
-        
+
         .product-category {
             font-size: 0.65rem;
             letter-spacing: 0.2em;
@@ -705,38 +749,38 @@
             color: var(--gold);
             margin-bottom: 0.5rem;
         }
-        
+
         .product-name {
             font-family: var(--font-display);
             font-size: 1.25rem;
             letter-spacing: 0.05em;
             margin-bottom: 0.5rem;
         }
-        
+
         .product-price {
             font-size: 1rem;
             color: var(--light-gray);
         }
-        
+
         /* Size Guide */
         .size-chart {
             max-width: 800px;
             margin: 0 auto;
             overflow-x: auto;
         }
-        
+
         .size-chart table {
             width: 100%;
             border-collapse: collapse;
         }
-        
+
         .size-chart th,
         .size-chart td {
             padding: 1rem;
             text-align: center;
             border: 1px solid var(--gray);
         }
-        
+
         .size-chart th {
             background: var(--gold);
             color: var(--black);
@@ -745,76 +789,76 @@
             font-size: 0.75rem;
             letter-spacing: 0.1em;
         }
-        
+
         .size-chart td {
             background: var(--dark-gray);
         }
-        
+
         .size-chart-heading {
             font-family: var(--font-display);
             margin-bottom: 1.5rem;
             text-align: center;
         }
-        
+
         .size-chart-heading-joggers {
             margin-top: 3rem;
         }
-        
+
         .size-chart-note {
             text-align: center;
             margin-top: 2rem;
             color: var(--light-gray);
             font-size: 0.875rem;
         }
-        
+
         .size-chart-link {
             color: var(--gold);
             text-decoration: none;
             transition: color 0.3s;
         }
-        
+
         .size-chart-link:hover {
             color: var(--gold-light);
         }
-        
+
         /* Contact Section */
         .contact-section {
             background: var(--off-black);
         }
-        
+
         .contact {
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .contact-form {
             display: grid;
             gap: 1.5rem;
         }
-        
+
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
         }
-        
+
         .form-group {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
         }
-        
+
         .form-group.full {
             grid-column: span 2;
         }
-        
+
         .form-group label {
             font-size: 0.75rem;
             letter-spacing: 0.1em;
             text-transform: uppercase;
             color: var(--light-gray);
         }
-        
+
         .form-group input,
         .form-group textarea,
         .form-group select {
@@ -827,22 +871,22 @@
             outline: none;
             transition: border-color 0.3s;
         }
-        
+
         .form-group input:focus,
         .form-group textarea:focus,
         .form-group select:focus {
             border-color: var(--gold);
         }
-        
+
         .form-group textarea {
             min-height: 150px;
             resize: vertical;
         }
-        
+
         .contact-submit {
             justify-self: start;
         }
-        
+
         /* Newsletter */
         .newsletter {
             padding: 8rem 3rem;
@@ -850,13 +894,13 @@
             color: var(--black);
             text-align: center;
         }
-        
+
         .newsletter h2 {
             font-family: var(--font-display);
             font-size: clamp(2rem, 5vw, 3.5rem);
             margin-bottom: 1rem;
         }
-        
+
         .newsletter p {
             font-family: var(--font-serif);
             font-size: 1.125rem;
@@ -864,14 +908,14 @@
             margin-bottom: 2rem;
             opacity: 0.8;
         }
-        
+
         .newsletter-form {
             display: flex;
             gap: 1rem;
             max-width: 500px;
             margin: 0 auto;
         }
-        
+
         .newsletter-form input {
             flex: 1;
             padding: 1rem 1.5rem;
@@ -882,11 +926,11 @@
             color: var(--black);
             outline: none;
         }
-        
+
         .newsletter-form input::placeholder {
-            color: rgba(0,0,0,0.5);
+            color: rgba(0, 0, 0, 0.5);
         }
-        
+
         .newsletter-form button {
             padding: 1rem 2rem;
             font-family: var(--font-sans);
@@ -900,25 +944,25 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-        
+
         .newsletter-form button:hover {
             background: transparent;
             color: var(--black);
         }
-        
+
         .newsletter-success {
             display: none;
             color: var(--black);
             font-weight: 500;
             margin-top: 1rem;
         }
-        
+
         /* Footer */
         footer {
             padding: 6rem 3rem 3rem;
             background: var(--black);
         }
-        
+
         .footer-grid {
             display: grid;
             grid-template-columns: 2fr repeat(3, 1fr);
@@ -926,30 +970,30 @@
             max-width: 1400px;
             margin: 0 auto 4rem;
         }
-        
+
         .footer-brand {
             max-width: 300px;
         }
-        
+
         .footer-logo {
             font-family: var(--font-display);
             font-size: 2rem;
             letter-spacing: 0.1em;
             margin-bottom: 1.5rem;
         }
-        
+
         .footer-brand p {
             font-size: 0.875rem;
             color: var(--light-gray);
             line-height: 1.7;
         }
-        
+
         .footer-social {
             display: flex;
             gap: 1rem;
             margin-top: 1.5rem;
         }
-        
+
         .footer-social a {
             width: 40px;
             height: 40px;
@@ -963,39 +1007,39 @@
             font-weight: 600;
             transition: all 0.3s;
         }
-        
+
         .footer-social a:hover {
             border-color: var(--gold);
             color: var(--gold);
             background: rgba(201, 162, 39, 0.1);
         }
-        
+
         .footer-column h4 {
             font-family: var(--font-display);
             font-size: 1rem;
             letter-spacing: 0.1em;
             margin-bottom: 1.5rem;
         }
-        
+
         .footer-column ul {
             list-style: none;
         }
-        
+
         .footer-column li {
             margin-bottom: 0.75rem;
         }
-        
+
         .footer-column a {
             color: var(--light-gray);
             text-decoration: none;
             font-size: 0.875rem;
             transition: color 0.3s;
         }
-        
+
         .footer-column a:hover {
             color: var(--gold);
         }
-        
+
         .footer-bottom {
             padding-top: 3rem;
             border-top: 1px solid var(--gray);
@@ -1007,34 +1051,34 @@
             flex-wrap: wrap;
             gap: 1rem;
         }
-        
+
         .footer-bottom p {
             font-size: 0.75rem;
             color: var(--light-gray);
         }
-        
+
         .footer-bottom a {
             color: var(--light-gray);
             text-decoration: none;
             transition: color 0.3s;
         }
-        
+
         .footer-bottom a:hover {
             color: var(--gold);
         }
-        
+
         .footer-payments {
             display: flex;
             gap: 1rem;
         }
-        
+
         .footer-payments span {
             font-size: 0.65rem;
             padding: 0.25rem 0.5rem;
             border: 1px solid var(--gray);
             color: var(--light-gray);
         }
-        
+
         /* Modal */
         .modal-overlay {
             position: fixed;
@@ -1049,11 +1093,11 @@
             justify-content: center;
             padding: 2rem;
         }
-        
+
         .modal-overlay.active {
             display: flex;
         }
-        
+
         .modal {
             background: var(--dark-gray);
             max-width: 500px;
@@ -1063,7 +1107,7 @@
             max-height: 90vh;
             overflow-y: auto;
         }
-        
+
         .modal-close {
             position: absolute;
             top: 1rem;
@@ -1075,35 +1119,35 @@
             cursor: pointer;
             transition: color 0.3s;
         }
-        
+
         .modal-close:hover {
             color: var(--gold);
         }
-        
+
         .modal h3 {
             font-family: var(--font-display);
             font-size: 2rem;
             margin-bottom: 1rem;
         }
-        
+
         .modal p {
             color: var(--light-gray);
             margin-bottom: 1.5rem;
         }
-        
+
         .cart-subtotal-line {
             display: flex;
             justify-content: space-between;
             font-size: 1.125rem;
             margin-bottom: 1rem;
         }
-        
+
         .cart-shipping-note {
             color: var(--light-gray);
             font-size: 0.875rem;
             margin-bottom: 1.5rem;
         }
-        
+
         /* Toast Notification */
         .toast {
             position: fixed;
@@ -1118,117 +1162,124 @@
             gap: 1rem;
             animation: slideIn 0.3s var(--ease-out-expo);
         }
-        
+
         .toast.active {
             display: flex;
         }
-        
+
         .toast.success {
             border-color: var(--success);
         }
-        
+
         .toast.error {
             border-color: var(--error);
         }
-        
+
         @keyframes slideIn {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
-        
+
         /* Animation Classes */
         .reveal {
             opacity: 0;
             transform: translateY(60px);
             transition: all 1s var(--ease-out-expo);
         }
-        
+
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         /* Responsive */
         @media (max-width: 1024px) {
             .about {
                 grid-template-columns: 1fr;
                 gap: 4rem;
             }
-            
+
             .about-image {
                 height: 400px;
             }
-            
+
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
                 gap: 3rem;
             }
-            
+
             .form-row {
                 grid-template-columns: 1fr;
             }
-            
+
             .form-group.full {
                 grid-column: span 1;
             }
         }
-        
+
         @media (max-width: 768px) {
             nav {
                 padding: 1rem 1.5rem;
             }
-            
+
             .nav-links {
                 display: none;
             }
-            
+
             .menu-toggle {
                 display: flex;
             }
-            
+
             .mobile-menu {
                 display: flex;
             }
-            
+
             section {
                 padding: 5rem 1.5rem;
             }
-            
+
             .hero-content {
                 padding: 1rem;
             }
-            
+
             .hero-cta {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .newsletter {
                 padding: 5rem 1.5rem;
             }
-            
+
             .newsletter-form {
                 flex-direction: column;
             }
-            
+
             footer {
                 padding: 4rem 1.5rem 2rem;
             }
-            
+
             .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-            
+
             .footer-bottom {
                 flex-direction: column;
                 text-align: center;
             }
-            
+
             .modal {
                 padding: 2rem;
             }
-            
+
             .toast {
                 left: 1rem;
                 right: 1rem;
@@ -1237,9 +1288,10 @@
         }
     </style>
 </head>
+
 <body>
     <div class="grain"></div>
-    
+
     <!-- Navigation -->
     <nav id="navbar">
         <a href="/" class="nav-logo">THC</a>
@@ -1259,7 +1311,7 @@
             <span></span>
         </div>
     </nav>
-    
+
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
         <a href="#shop" onclick="closeMobileMenu()">Shop</a>
@@ -1268,7 +1320,7 @@
         <a href="#contact" onclick="closeMobileMenu()">Contact</a>
         <a href="javascript:void(0)" onclick="openCart(); closeMobileMenu()">Cart</a>
     </div>
-    
+
     <!-- Hero -->
     <section class="hero" id="home">
         <div class="hero-bg"></div>
@@ -1290,7 +1342,7 @@
             <div class="scroll-line"></div>
         </div>
     </section>
-    
+
     <!-- Marquee -->
     <div class="marquee">
         <div class="marquee-track">
@@ -1324,7 +1376,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- About Section -->
     <section id="about">
         <div class="about reveal">
@@ -1332,7 +1384,9 @@
                 <h2>THE PHILOSOPHY</h2>
                 <a href="#shop" class="btn btn-explore">Explore Collection</a>
                 <span class="highlight">"The loudest statement is claiming you have nothing to prove."</span>
-                <p>Too Humble Couture is for those self-aware individuals who understand the irony. The ones who can laugh at themselves while looking absolutely incredible doing it. Premium fabrics. Elevated cuts. A wink at the culture.</p>
+                <p>Too Humble Couture is for those self-aware individuals who understand the irony. The ones who can
+                    laugh at themselves while looking absolutely incredible doing it. Premium fabrics. Elevated cuts. A
+                    wink at the culture.</p>
                 <p>Because nothing says "I don't need validation" quite like wearing it on a $85 hoodie.</p>
                 <a href="#shop" class="btn btn-explore">Explore Collection</a>
             </div>
@@ -1343,14 +1397,14 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Products Section -->
     <section class="products" id="shop">
         <div class="section-header reveal">
             <h2>THE COLLECTION</h2>
             <p>Carefully curated pieces for the obviously humble</p>
         </div>
-        
+
         <div class="products-grid">
             <!-- Product 1 -->
             <div class="product-card reveal" data-product="very-humble-tee">
@@ -1359,7 +1413,9 @@
                     <img src="obviously-humble-tee.png" alt="Obviously Humble Oversized Tee">
                     <div class="product-overlay"></div>
                     <div class="product-quick-add">
-                        <button class="btn" onclick="event.preventDefault(); addToCart('very-humble-tee', 'Obviously HUMBLE Oversized Tee', 48)">Add to Cart</button>
+                        <button class="btn"
+                            onclick="event.preventDefault(); addToCart('very-humble-tee', 'Obviously HUMBLE Oversized Tee', 48)">Add
+                            to Cart</button>
                     </div>
                 </a>
                 <div class="product-info">
@@ -1368,14 +1424,16 @@
                     <p class="product-price">$48.00</p>
                 </div>
             </div>
-            
+
             <!-- Product 2 -->
             <div class="product-card reveal" data-product="not-bragging-hoodie">
                 <a href="products/im-not-bragging-premium-hoodie.html" class="product-image">
                     <img src="not-bragging.png" alt="Not Bragging Premium Hoodie">
                     <div class="product-overlay"></div>
                     <div class="product-quick-add">
-                        <button class="btn" onclick="event.preventDefault(); addToCart('not-bragging-hoodie', 'NOT BRAGGING Premium Hoodie', 92)">Add to Cart</button>
+                        <button class="btn"
+                            onclick="event.preventDefault(); addToCart('not-bragging-hoodie', 'NOT BRAGGING Premium Hoodie', 92)">Add
+                            to Cart</button>
                     </div>
                 </a>
                 <div class="product-info">
@@ -1384,14 +1442,16 @@
                     <p class="product-price">$92.00</p>
                 </div>
             </div>
-            
+
             <!-- Product 3 -->
             <div class="product-card reveal" data-product="lowkey-cap">
                 <a href="products/lowkey-cap.html" class="product-image">
                     <img src="thc-lowkey-cap2.png" alt="Lowkey Trucker Hat">
                     <div class="product-overlay"></div>
                     <div class="product-quick-add">
-                        <button class="btn" onclick="event.preventDefault(); addToCart('lowkey-cap', 'LOWKEY Trucker Hat', 42)">Add to Cart</button>
+                        <button class="btn"
+                            onclick="event.preventDefault(); addToCart('lowkey-cap', 'LOWKEY Trucker Hat', 42)">Add to
+                            Cart</button>
                     </div>
                 </a>
                 <div class="product-info">
@@ -1400,14 +1460,16 @@
                     <p class="product-price">$42.00</p>
                 </div>
             </div>
-            
+
             <!-- Product 4 -->
             <div class="product-card reveal" data-product="zero-ego-joggers">
                 <a href="products/zero-ego-joggers.html" class="product-image">
                     <img src="thc-zero-ego-joggers.png" alt="Zero Ego Joggers">
                     <div class="product-overlay"></div>
                     <div class="product-quick-add">
-                        <button class="btn" onclick="event.preventDefault(); addToCart('zero-ego-joggers', 'ZERO EGO Joggers', 72)">Add to Cart</button>
+                        <button class="btn"
+                            onclick="event.preventDefault(); addToCart('zero-ego-joggers', 'ZERO EGO Joggers', 72)">Add
+                            to Cart</button>
                     </div>
                 </a>
                 <div class="product-info">
@@ -1416,7 +1478,7 @@
                     <p class="product-price">$72.00</p>
                 </div>
             </div>
-            
+
             <!-- Product 5 -->
             <div class="product-card reveal" data-product="effortlessly-modest-crew">
                 <span class="product-badge">New</span>
@@ -1424,7 +1486,9 @@
                     <img src="effortlessly-modest.png" alt="Effortlessly Modest Crewneck">
                     <div class="product-overlay"></div>
                     <div class="product-quick-add">
-                        <button class="btn" onclick="event.preventDefault(); addToCart('effortlessly-modest-crew', 'EFFORTLESSLY MODEST Crewneck', 68)">Add to Cart</button>
+                        <button class="btn"
+                            onclick="event.preventDefault(); addToCart('effortlessly-modest-crew', 'EFFORTLESSLY MODEST Crewneck', 68)">Add
+                            to Cart</button>
                     </div>
                 </a>
                 <div class="product-info">
@@ -1433,14 +1497,16 @@
                     <p class="product-price">$68.00</p>
                 </div>
             </div>
-            
+
             <!-- Product 6 -->
             <div class="product-card reveal" data-product="thc-logo-tee">
                 <a href="products/thc-logo-tee.html" class="product-image">
                     <img src="thc-logo-tee.png" alt="THC Logo Tee">
                     <div class="product-overlay"></div>
                     <div class="product-quick-add">
-                        <button class="btn" onclick="event.preventDefault(); addToCart('thc-logo-tee', 'THC Logo Tee', 42)">Add to Cart</button>
+                        <button class="btn"
+                            onclick="event.preventDefault(); addToCart('thc-logo-tee', 'THC Logo Tee', 42)">Add to
+                            Cart</button>
                     </div>
                 </a>
                 <div class="product-info">
@@ -1449,14 +1515,16 @@
                     <p class="product-price">$42.00</p>
                 </div>
             </div>
-            
+
             <!-- Product 7 -->
             <div class="product-card reveal" data-product="self-made-hoodie">
                 <a href="products/self-made-hoodie.html" class="product-image">
                     <img src="self-made-hoodie.png" alt="Self Made Hoodie">
                     <div class="product-overlay"></div>
                     <div class="product-quick-add">
-                        <button class="btn" onclick="event.preventDefault(); addToCart('self-made-hoodie', 'SELF MADE (With Help) Hoodie', 85)">Add to Cart</button>
+                        <button class="btn"
+                            onclick="event.preventDefault(); addToCart('self-made-hoodie', 'SELF MADE (With Help) Hoodie', 85)">Add
+                            to Cart</button>
                     </div>
                 </a>
                 <div class="product-info">
@@ -1465,7 +1533,7 @@
                     <p class="product-price">$85.00</p>
                 </div>
             </div>
-            
+
             <!-- Product 8 -->
             <div class="product-card reveal" data-product="humble-elite-tee">
                 <span class="product-badge">Limited</span>
@@ -1473,7 +1541,9 @@
                     <img src="humble-elite-back.png" alt="Humble Elite Tee">
                     <div class="product-overlay"></div>
                     <div class="product-quick-add">
-                        <button class="btn" onclick="event.preventDefault(); addToCart('humble-elite-tee', 'HUMBLE ELITE Tee', 52)">Add to Cart</button>
+                        <button class="btn"
+                            onclick="event.preventDefault(); addToCart('humble-elite-tee', 'HUMBLE ELITE Tee', 52)">Add
+                            to Cart</button>
                     </div>
                 </a>
                 <div class="product-info">
@@ -1482,14 +1552,16 @@
                     <p class="product-price">$52.00</p>
                 </div>
             </div>
-            
+
             <!-- Product 9 -->
             <div class="product-card reveal" data-product="snapback-hat">
                 <a href="products/snapback-hat.html" class="product-image">
                     <img src="snapback-hat.png" alt="Snapback Hat">
                     <div class="product-overlay"></div>
                     <div class="product-quick-add">
-                        <button class="btn" onclick="event.preventDefault(); addToCart('snapback-hat', 'Snapback Hat', 48)">Add to Cart</button>
+                        <button class="btn"
+                            onclick="event.preventDefault(); addToCart('snapback-hat', 'Snapback Hat', 48)">Add to
+                            Cart</button>
                     </div>
                 </a>
                 <div class="product-info">
@@ -1500,14 +1572,14 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Size Guide -->
     <section id="sizing">
         <div class="section-header reveal">
             <h2>SIZE GUIDE</h2>
             <p>Find your perfect humble fit</p>
         </div>
-        
+
         <div class="size-chart reveal">
             <h3 class="size-chart-heading">T-SHIRTS & HOODIES</h3>
             <table>
@@ -1520,14 +1592,39 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>S</td><td>36-38</td><td>27</td><td>8</td></tr>
-                    <tr><td>M</td><td>39-41</td><td>28</td><td>8.5</td></tr>
-                    <tr><td>L</td><td>42-44</td><td>29</td><td>9</td></tr>
-                    <tr><td>XL</td><td>45-47</td><td>30</td><td>9.5</td></tr>
-                    <tr><td>2XL</td><td>48-50</td><td>31</td><td>10</td></tr>
+                    <tr>
+                        <td>S</td>
+                        <td>36-38</td>
+                        <td>27</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>39-41</td>
+                        <td>28</td>
+                        <td>8.5</td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td>42-44</td>
+                        <td>29</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>XL</td>
+                        <td>45-47</td>
+                        <td>30</td>
+                        <td>9.5</td>
+                    </tr>
+                    <tr>
+                        <td>2XL</td>
+                        <td>48-50</td>
+                        <td>31</td>
+                        <td>10</td>
+                    </tr>
                 </tbody>
             </table>
-            
+
             <h3 class="size-chart-heading size-chart-heading-joggers">JOGGERS</h3>
             <table>
                 <thead>
@@ -1539,27 +1636,53 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>S</td><td>28-30</td><td>29</td><td>38-40</td></tr>
-                    <tr><td>M</td><td>31-33</td><td>30</td><td>41-43</td></tr>
-                    <tr><td>L</td><td>34-36</td><td>31</td><td>44-46</td></tr>
-                    <tr><td>XL</td><td>37-39</td><td>32</td><td>47-49</td></tr>
-                    <tr><td>2XL</td><td>40-42</td><td>32</td><td>50-52</td></tr>
+                    <tr>
+                        <td>S</td>
+                        <td>28-30</td>
+                        <td>29</td>
+                        <td>38-40</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>31-33</td>
+                        <td>30</td>
+                        <td>41-43</td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td>34-36</td>
+                        <td>31</td>
+                        <td>44-46</td>
+                    </tr>
+                    <tr>
+                        <td>XL</td>
+                        <td>37-39</td>
+                        <td>32</td>
+                        <td>47-49</td>
+                    </tr>
+                    <tr>
+                        <td>2XL</td>
+                        <td>40-42</td>
+                        <td>32</td>
+                        <td>50-52</td>
+                    </tr>
                 </tbody>
             </table>
-            
+
             <p class="size-chart-note">
-                Our pieces are designed with an oversized fit. For a more fitted look, size down. Need help? <a href="#contact" class="size-chart-link">Contact us</a>
+                Our pieces are designed with an oversized fit. For a more fitted look, size down. Need help? <a
+                    href="#contact" class="size-chart-link">Contact us</a>
             </p>
         </div>
     </section>
-    
+
     <!-- Video Showcase -->
     <section class="video-showcase">
         <div class="section-header reveal">
             <h2>THE VIBE</h2>
             <p>See the collection in motion</p>
         </div>
-        
+
         <div class="video-grid">
             <div class="video-card reveal">
                 <video autoplay loop muted playsinline>
@@ -1579,14 +1702,14 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="section-header reveal">
             <h2>GET IN TOUCH</h2>
             <p>Questions, collaborations, or just want to chat?</p>
         </div>
-        
+
         <div class="contact reveal">
             <form class="contact-form" id="contact-form">
                 <div class="form-row">
@@ -1617,12 +1740,13 @@
             </form>
         </div>
     </section>
-    
+
     <!-- Newsletter -->
     <section class="newsletter">
         <h2>JOIN THE HUMBLE ELITE</h2>
         <p>Be the first to know about drops. No bragging, we promise.</p>
-        <a data-formkit-toggle="303619af04" href="https://toohumblecouture.kit.com/303619af04" class="btn btn-dark">Subscribe</a>
+        <a data-formkit-toggle="303619af04" href="https://toohumblecouture.kit.com/303619af04"
+            class="btn btn-dark">Subscribe</a>
         <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
         <form action="https://app.kit.com/forms/8820031/subscriptions" class="seva-form formkit-form" method="post"
             data-sv-form="8820031" data-uid="303619af04" data-format="modal" data-version="5"
@@ -1640,8 +1764,8 @@
                 <div>
                     <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
                     <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
-                        <div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email Address"
-                                placeholder="Email Address" required="" type="email">
+                        <div class="formkit-field"><input class="formkit-input" name="email_address"
+                                aria-label="Email Address" placeholder="Email Address" required="" type="email">
                         </div><button type="submit" data-element="submit" class="formkit-submit formkit-submit">
                             <div class="formkit-spinner">
                                 <div></div>
@@ -1652,8 +1776,8 @@
                     </div>
                     <div class="formkit-powered-by-convertkit-container"><a
                             href="https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic"
-                            data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark" target="_blank"
-                            rel="nofollow noopener">Built with Kit</a></div>
+                            data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark"
+                            target="_blank" rel="nofollow noopener">Built with Kit</a></div>
                 </div>
             </div>
             <style>
@@ -1661,52 +1785,52 @@
                 .formkit-container[data-style="full"] {
                     background-color: rgb(255, 255, 255);
                 }
-                
+
                 .formkit-hero-bg-color {
                     background-color: rgb(16, 16, 16);
                 }
-                
+
                 .formkit-hero-bg-img {
                     background-color: rgb(16, 16, 16);
                     background-image: url("//pages.convertkit.com/assets/rainier/bg.jpg");
                     opacity: 0.3;
                 }
-                
+
                 .formkit-header[data-element="header"] {
                     color: rgb(255, 255, 255);
                     font-size: 28px;
                     font-weight: 700;
                 }
-                
+
                 .formkit-content[data-element="content"] {
                     color: rgb(255, 255, 255);
                     font-size: 18px;
                     font-weight: 400;
                 }
-                
+
                 .formkit-input {
                     color: rgb(146, 146, 146);
                     border-color: rgb(228, 231, 234);
                     border-radius: 0px;
                     font-weight: 400;
                 }
-                
+
                 .formkit-submit[data-element="submit"] {
                     color: rgb(255, 255, 255);
                     background-color: rgb(199, 92, 86);
                     border-radius: 0px;
                     font-weight: 700;
                 }
-                
+
                 .formkit-form[data-uid="303619af04"] * {
                     box-sizing: border-box;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] {
                     -webkit-font-smoothing: antialiased;
                     -moz-osx-font-smoothing: grayscale;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] legend {
                     border: none;
                     font-size: inherit;
@@ -1715,18 +1839,18 @@
                     position: relative;
                     display: table;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] fieldset {
                     border: 0;
                     padding: 0.01em 0 0 0;
                     margin: 0;
                     min-width: 0;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] body:not(:-moz-handler-blocked) fieldset {
                     display: table-cell;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] h1,
                 .formkit-form[data-uid="303619af04"] h2,
                 .formkit-form[data-uid="303619af04"] h3,
@@ -1737,29 +1861,29 @@
                     font-size: inherit;
                     font-weight: inherit;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] h2 {
                     font-size: 1.5em;
                     margin: 1em 0;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] h3 {
                     font-size: 1.17em;
                     margin: 1em 0;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] p {
                     color: inherit;
                     font-size: inherit;
                     font-weight: inherit;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] ol:not([template-default]),
                 .formkit-form[data-uid="303619af04"] ul:not([template-default]),
                 .formkit-form[data-uid="303619af04"] blockquote:not([template-default]) {
                     text-align: left;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] p:not([template-default]),
                 .formkit-form[data-uid="303619af04"] hr:not([template-default]),
                 .formkit-form[data-uid="303619af04"] blockquote:not([template-default]),
@@ -1768,39 +1892,39 @@
                     color: inherit;
                     font-style: initial;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .ordered-list,
                 .formkit-form[data-uid="303619af04"] .unordered-list {
                     list-style-position: outside !important;
                     padding-left: 1em;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .list-item {
                     padding-left: 0;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"][data-format="modal"] {
                     display: none;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"][data-format="slide in"] {
                     display: none;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"][data-format="sticky bar"] {
                     display: none;
                 }
-        
+
                 .formkit-sticky-bar .formkit-form[data-uid="303619af04"][data-format="sticky bar"] {
                     display: block;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-input,
                 .formkit-form[data-uid="303619af04"] .formkit-select,
                 .formkit-form[data-uid="303619af04"] .formkit-checkboxes {
                     width: 100%;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-button,
                 .formkit-form[data-uid="303619af04"] .formkit-submit {
                     border: 0;
@@ -1818,21 +1942,21 @@
                     position: relative;
                     vertical-align: middle;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-button:hover,
                 .formkit-form[data-uid="303619af04"] .formkit-submit:hover,
                 .formkit-form[data-uid="303619af04"] .formkit-button:focus,
                 .formkit-form[data-uid="303619af04"] .formkit-submit:focus {
                     outline: none;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-button:hover>span,
                 .formkit-form[data-uid="303619af04"] .formkit-submit:hover>span,
                 .formkit-form[data-uid="303619af04"] .formkit-button:focus>span,
                 .formkit-form[data-uid="303619af04"] .formkit-submit:focus>span {
                     background-color: rgba(0, 0, 0, 0.1);
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-button>span,
                 .formkit-form[data-uid="303619af04"] .formkit-submit>span {
                     display: block;
@@ -1840,7 +1964,7 @@
                     transition: all 300ms ease-in-out;
                     padding: 12px 24px;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-input {
                     background: #ffffff;
                     font-size: 15px;
@@ -1854,40 +1978,40 @@
                     -webkit-transition: border-color ease-out 300ms;
                     transition: border-color ease-out 300ms;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-input:focus {
                     outline: none;
                     border-color: #1677be;
                     -webkit-transition: border-color ease 300ms;
                     transition: border-color ease 300ms;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-input::-webkit-input-placeholder {
                     color: inherit;
                     opacity: 0.8;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-input::-moz-placeholder {
                     color: inherit;
                     opacity: 0.8;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-input:-ms-input-placeholder {
                     color: inherit;
                     opacity: 0.8;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-input::placeholder {
                     color: inherit;
                     opacity: 0.8;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] [data-group="dropdown"] {
                     position: relative;
                     display: inline-block;
                     width: 100%;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] [data-group="dropdown"]::before {
                     content: "";
                     top: calc(50% - 2.5px);
@@ -1901,7 +2025,7 @@
                     width: 0;
                     z-index: 999;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] [data-group="dropdown"] select {
                     height: auto;
                     width: 100%;
@@ -1919,59 +2043,59 @@
                     border: 1px solid #e3e3e3;
                     background: #ffffff;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] [data-group="dropdown"] select:focus {
                     outline: none;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] [data-group="checkboxes"] {
                     text-align: left;
                     margin: 0;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] [data-group="checkboxes"] [data-group="checkbox"] {
                     margin-bottom: 10px;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] [data-group="checkboxes"] [data-group="checkbox"] * {
                     cursor: pointer;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] [data-group="checkboxes"] [data-group="checkbox"]:last-of-type {
                     margin-bottom: 0;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] [data-group="checkboxes"] [data-group="checkbox"] input[type="checkbox"] {
                     display: none;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] [data-group="checkboxes"] [data-group="checkbox"] input[type="checkbox"]+label::after {
                     content: none;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] [data-group="checkboxes"] [data-group="checkbox"] input[type="checkbox"]:checked+label::after {
                     border-color: #ffffff;
                     content: "";
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] [data-group="checkboxes"] [data-group="checkbox"] input[type="checkbox"]:checked+label::before {
                     background: #10bf7a;
                     border-color: #10bf7a;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] [data-group="checkboxes"] [data-group="checkbox"] label {
                     position: relative;
                     display: inline-block;
                     padding-left: 28px;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] [data-group="checkboxes"] [data-group="checkbox"] label::before,
                 .formkit-form[data-uid="303619af04"] [data-group="checkboxes"] [data-group="checkbox"] label::after {
                     position: absolute;
                     content: "";
                     display: inline-block;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] [data-group="checkboxes"] [data-group="checkbox"] label::before {
                     height: 16px;
                     width: 16px;
@@ -1980,7 +2104,7 @@
                     left: 0px;
                     top: 3px;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] [data-group="checkboxes"] [data-group="checkbox"] label::after {
                     height: 4px;
                     width: 8px;
@@ -1992,7 +2116,7 @@
                     left: 4px;
                     top: 8px;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-alert {
                     background: #f9fafb;
                     border: 1px solid #e3e3e3;
@@ -2006,23 +2130,23 @@
                     text-align: center;
                     width: 100%;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-alert:empty {
                     display: none;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-alert-success {
                     background: #d3fbeb;
                     border-color: #10bf7a;
                     color: #0c905c;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-alert-error {
                     background: #fde8e2;
                     border-color: #f2643b;
                     color: #ea4110;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-spinner {
                     display: -webkit-box;
                     display: -webkit-flex;
@@ -2041,7 +2165,7 @@
                     -webkit-transition: all 300ms ease-in-out;
                     transition: all 300ms ease-in-out;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-spinner>div {
                     margin: auto;
                     width: 12px;
@@ -2053,31 +2177,31 @@
                     -webkit-animation: formkit-bouncedelay-formkit-form-data-uid-303619af04- 1.4s infinite ease-in-out both;
                     animation: formkit-bouncedelay-formkit-form-data-uid-303619af04- 1.4s infinite ease-in-out both;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-spinner>div:nth-child(1) {
                     -webkit-animation-delay: -0.32s;
                     animation-delay: -0.32s;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-spinner>div:nth-child(2) {
                     -webkit-animation-delay: -0.16s;
                     animation-delay: -0.16s;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-submit[data-active] .formkit-spinner {
                     opacity: 1;
                     height: 100%;
                     width: 50px;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-submit[data-active] .formkit-spinner~span {
                     opacity: 0;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-powered-by[data-active="false"] {
                     opacity: 0.35;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-powered-by-convertkit-container {
                     display: -webkit-box;
                     display: -webkit-flex;
@@ -2087,11 +2211,11 @@
                     margin: 10px 0;
                     position: relative;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-powered-by-convertkit-container[data-active="false"] {
                     opacity: 0.35;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-powered-by-convertkit {
                     -webkit-align-items: center;
                     -webkit-box-align: center;
@@ -2122,9 +2246,9 @@
                     background-position: center;
                     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='133' height='36' viewBox='0 0 133 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.861 25.5C0.735 25.5 0.651 25.416 0.651 25.29V10.548C0.651 10.422 0.735 10.338 0.861 10.338H6.279C9.072 10.338 10.668 11.451 10.668 13.824C10.668 15.819 9.219 16.932 8.001 17.226C7.707 17.268 7.707 17.625 8.022 17.688C9.912 18.108 11.088 19.116 11.088 21.321C11.088 23.715 9.429 25.5 6.426 25.5H0.861ZM5.397 23.085C6.825 23.085 7.518 22.224 7.518 21.006C7.518 19.683 6.825 18.948 5.397 18.948H4.2V23.085H5.397ZM5.313 16.617C6.51 16.617 7.245 15.945 7.245 14.601C7.245 13.383 6.51 12.753 5.25 12.753H4.2V16.617H5.313ZM17.9758 23.883C17.9758 23.568 17.6608 23.505 17.5348 23.799C17.0308 24.954 16.1698 25.731 14.5528 25.731C12.8728 25.731 12.0958 24.471 12.0958 22.707V14.937C12.0958 14.811 12.1798 14.727 12.3058 14.727H15.2248C15.3508 14.727 15.4348 14.811 15.4348 14.937V21.657C15.4348 22.581 15.7708 23.022 16.4638 23.022C17.1778 23.022 17.6188 22.581 17.6188 21.657V14.937C17.6188 14.811 17.7028 14.727 17.8288 14.727H20.7478C20.8738 14.727 20.9578 14.811 20.9578 14.937V25.29C20.9578 25.416 20.8738 25.5 20.7478 25.5H18.1858C18.0598 25.5 17.9758 25.416 17.9758 25.29V23.883ZM25.6141 25.29C25.6141 25.416 25.5301 25.5 25.4041 25.5H22.4851C22.3591 25.5 22.2751 25.416 22.2751 25.29V14.937C22.2751 14.811 22.3591 14.727 22.4851 14.727H25.4041C25.5301 14.727 25.6141 14.811 25.6141 14.937V25.29ZM23.9131 13.74C22.8001 13.74 22.0441 12.942 22.0441 11.934C22.0441 10.926 22.8001 10.107 23.9131 10.107C25.0051 10.107 25.7611 10.926 25.7611 11.934C25.7611 12.942 25.0051 13.74 23.9131 13.74ZM26.7883 10.548C26.7883 10.422 26.8723 10.338 26.9983 10.338H29.9173C30.0433 10.338 30.1273 10.422 30.1273 10.548V22.056C30.1273 22.749 30.2533 23.085 30.8203 23.085C31.0093 23.085 31.1983 23.043 31.3663 23.001C31.5133 22.959 31.6183 22.959 31.6183 23.127V25.059C31.6183 25.164 31.5763 25.269 31.4923 25.311C30.9673 25.521 30.2953 25.71 29.5813 25.71C27.7123 25.71 26.7883 24.639 26.7883 22.476V10.548ZM32.4237 14.727C32.8227 14.727 32.9277 14.538 32.9697 14.055L33.1167 12.039C33.1167 11.913 33.2217 11.829 33.3477 11.829H35.8887C36.0147 11.829 36.0987 11.913 36.0987 12.039V14.517C36.0987 14.643 36.1827 14.727 36.3087 14.727H38.2827C38.4087 14.727 38.4927 14.811 38.4927 14.937V16.659C38.4927 16.785 38.4087 16.869 38.2827 16.869H36.0777V22.056C36.0777 22.875 36.5397 23.085 37.0647 23.085C37.4847 23.085 37.9467 22.938 38.3247 22.707C38.4717 22.623 38.5767 22.665 38.5767 22.833V24.828C38.5767 24.933 38.5347 25.017 38.4507 25.08C37.8417 25.458 36.9807 25.71 36.0357 25.71C34.2927 25.71 32.7387 24.912 32.7387 22.476V16.869H31.8567C31.7307 16.869 31.6467 16.785 31.6467 16.659V14.937C31.6467 14.811 31.7307 14.727 31.8567 14.727H32.4237ZM51.3808 14.727C51.5068 14.727 51.5908 14.79 51.6118 14.916L52.3888 19.851L52.5778 21.174C52.6198 21.468 52.9558 21.468 52.9768 21.174C53.0398 20.712 53.0818 20.271 53.1658 19.83L53.8798 14.916C53.9008 14.79 53.9848 14.727 54.1108 14.727H56.6728C56.8198 14.727 56.8828 14.811 56.8618 14.958L54.6778 25.311C54.6568 25.437 54.5728 25.5 54.4468 25.5H51.3178C51.1918 25.5 51.1078 25.437 51.0868 25.311L50.1208 20.082L49.8898 18.633C49.8688 18.444 49.6588 18.444 49.6378 18.633L49.4068 20.103L48.5458 25.311C48.5248 25.437 48.4408 25.5 48.3148 25.5H45.2068C45.0808 25.5 44.9968 25.437 44.9758 25.311L42.8128 14.958C42.7918 14.811 42.8548 14.727 43.0018 14.727H45.9628C46.0888 14.727 46.1728 14.79 46.1938 14.916L46.9288 19.83C47.0128 20.271 47.0758 20.754 47.1388 21.195C47.2018 21.51 47.4748 21.531 47.5378 21.195L47.7478 19.872L48.6088 14.916C48.6298 14.79 48.7138 14.727 48.8398 14.727H51.3808ZM61.1582 25.29C61.1582 25.416 61.0742 25.5 60.9482 25.5H58.0292C57.9032 25.5 57.8192 25.416 57.8192 25.29V14.937C57.8192 14.811 57.9032 14.727 58.0292 14.727H60.9482C61.0742 14.727 61.1582 14.811 61.1582 14.937V25.29ZM59.4572 13.74C58.3442 13.74 57.5882 12.942 57.5882 11.934C57.5882 10.926 58.3442 10.107 59.4572 10.107C60.5492 10.107 61.3052 10.926 61.3052 11.934C61.3052 12.942 60.5492 13.74 59.4572 13.74ZM62.8154 14.727C63.2144 14.727 63.3194 14.538 63.3614 14.055L63.5084 12.039C63.5084 11.913 63.6134 11.829 63.7394 11.829H66.2804C66.4064 11.829 66.4904 11.913 66.4904 12.039V14.517C66.4904 14.643 66.5744 14.727 66.7004 14.727H68.6744C68.8004 14.727 68.8844 14.811 68.8844 14.937V16.659C68.8844 16.785 68.8004 16.869 68.6744 16.869H66.4694V22.056C66.4694 22.875 66.9314 23.085 67.4564 23.085C67.8764 23.085 68.3384 22.938 68.7164 22.707C68.8634 22.623 68.9684 22.665 68.9684 22.833V24.828C68.9684 24.933 68.9264 25.017 68.8424 25.08C68.2334 25.458 67.3724 25.71 66.4274 25.71C64.6844 25.71 63.1304 24.912 63.1304 22.476V16.869H62.2484C62.1224 16.869 62.0384 16.785 62.0384 16.659V14.937C62.0384 14.811 62.1224 14.727 62.2484 14.727H62.8154ZM73.4298 16.323C73.4298 16.638 73.7868 16.68 73.9128 16.407C74.3748 15.315 75.1308 14.496 76.6008 14.496C78.2178 14.496 78.9528 15.609 78.9528 17.373V25.29C78.9528 25.416 78.8688 25.5 78.7428 25.5H75.8238C75.6978 25.5 75.6138 25.416 75.6138 25.29V18.633C75.6138 17.709 75.2778 17.268 74.5848 17.268C73.8708 17.268 73.4298 17.709 73.4298 18.633V25.29C73.4298 25.416 73.3458 25.5 73.2198 25.5H70.3008C70.1748 25.5 70.0908 25.416 70.0908 25.29V10.548C70.0908 10.422 70.1748 10.338 70.3008 10.338H73.2198C73.3458 10.338 73.4298 10.422 73.4298 10.548V16.323Z' fill='%231E1E1E'/%3E%3Cpath d='M100.132 16.3203C105.58 17.3761 107.272 22.4211 107.318 27.4961C107.318 27.6101 107.226 27.7041 107.112 27.7041H100.252C100.138 27.7041 100.046 27.6121 100.046 27.5001C100.026 23.5629 99.3877 20.0896 95.4865 19.9396C95.3705 19.9356 95.2725 20.0276 95.2725 20.1456V27.5001C95.2725 27.6141 95.1806 27.7061 95.0666 27.7061H88.206C88.092 27.7061 88 27.6141 88 27.5001V8.75585C88 8.64187 88.092 8.54989 88.206 8.54989H95.0686C95.1826 8.54989 95.2745 8.64187 95.2745 8.75585V15.7764C95.2745 15.8804 95.3585 15.9644 95.4625 15.9644C95.5445 15.9644 95.6185 15.9104 95.6425 15.8324C97.4081 10.0416 100.709 8.58588 106.07 8.55189C106.184 8.55189 106.276 8.64387 106.276 8.75785V15.7604C106.276 15.8744 106.184 15.9664 106.07 15.9664H100.166C100.066 15.9664 99.9856 16.0464 99.9856 16.1464C99.9856 16.2304 100.048 16.3043 100.132 16.3203ZM118.918 20.7095V16.1704C118.918 16.0564 119.01 15.9644 119.124 15.9644H124.173C124.273 15.9644 124.353 15.8844 124.353 15.7844C124.353 15.6985 124.291 15.6245 124.207 15.6085C120.256 14.8246 118.432 12.5511 118.37 8.75585C118.368 8.64387 118.458 8.54989 118.572 8.54989H125.986C126.1 8.54989 126.192 8.64187 126.192 8.75585V11.9532C126.192 12.0672 126.284 12.1592 126.398 12.1592H130.649C130.763 12.1592 130.855 12.2511 130.855 12.3651V15.7624C130.855 15.8764 130.763 15.9684 130.649 15.9684H126.398C126.284 15.9684 126.192 16.0604 126.192 16.1744V19.8356C126.192 21.1294 126.986 21.5553 128.04 21.5553C129.692 21.5553 131.323 20.8114 131.977 20.4735C132.113 20.4035 132.277 20.5015 132.277 20.6555V26.3543C132.277 26.5063 132.193 26.6463 132.059 26.7183C131.413 27.0582 129.418 28 127.136 28C122.435 27.996 118.918 26.0824 118.918 20.7095ZM109.266 27.4981V16.1704C109.266 16.0564 109.358 15.9644 109.472 15.9644H116.334C116.448 15.9644 116.54 16.0564 116.54 16.1704V27.4981C116.54 27.6121 116.448 27.7041 116.334 27.7041H109.472C109.358 27.7021 109.266 27.6101 109.266 27.4981ZM108.876 11.4913C108.876 13.4189 110.238 14.9826 112.853 14.9826C115.469 14.9826 116.83 13.4189 116.83 11.4913C116.83 9.56369 115.471 8 112.853 8C110.238 8 108.876 9.56369 108.876 11.4913Z' fill='%231E1E1E'/%3E%3Cpath d='M100.132 16.3203C105.58 17.3761 107.272 22.4211 107.318 27.4961C107.318 27.6101 107.226 27.7041 107.112 27.7041H100.252C100.138 27.7041 100.046 27.6121 100.046 27.5001C100.026 23.5629 99.3877 20.0896 95.4865 19.9396C95.3705 19.9356 95.2725 20.0276 95.2725 20.1456V27.5001C95.2725 27.6141 95.1806 27.7061 95.0666 27.7061H88.206C88.092 27.7061 88 27.6141 88 27.5001V8.75585C88 8.64187 88.092 8.54989 88.206 8.54989H95.0686C95.1826 8.54989 95.2745 8.64187 95.2745 8.75585V15.7764C95.2745 15.8804 95.3585 15.9644 95.4625 15.9644C95.5445 15.9644 95.6185 15.9104 95.6425 15.8324C97.4081 10.0416 100.709 8.58588 106.07 8.55189C106.184 8.55189 106.276 8.64387 106.276 8.75785V15.7604C106.276 15.8744 106.184 15.9664 106.07 15.9664H100.166C100.066 15.9664 99.9856 16.0464 99.9856 16.1464C99.9856 16.2304 100.048 16.3043 100.132 16.3203ZM118.918 20.7095V16.1704C118.918 16.0564 119.01 15.9644 119.124 15.9644H124.173C124.273 15.9644 124.353 15.8844 124.353 15.7844C124.353 15.6985 124.291 15.6245 124.207 15.6085C120.256 14.8246 118.432 12.5511 118.37 8.75585C118.368 8.64387 118.458 8.54989 118.572 8.54989H125.986C126.1 8.54989 126.192 8.64187 126.192 8.75585V11.9532C126.192 12.0672 126.284 12.1592 126.398 12.1592H130.649C130.763 12.1592 130.855 12.2511 130.855 12.3651V15.7624C130.855 15.8764 130.763 15.9684 130.649 15.9684H126.398C126.284 15.9684 126.192 16.0604 126.192 16.1744V19.8356C126.192 21.1294 126.986 21.5553 128.04 21.5553C129.692 21.5553 131.323 20.8114 131.977 20.4735C132.113 20.4035 132.277 20.5015 132.277 20.6555V26.3543C132.277 26.5063 132.193 26.6463 132.059 26.7183C131.413 27.0582 129.418 28 127.136 28C122.435 27.996 118.918 26.0824 118.918 20.7095ZM109.266 27.4981V16.1704C109.266 16.0564 109.358 15.9644 109.472 15.9644H116.334C116.448 15.9644 116.54 16.0564 116.54 16.1704V27.4981C116.54 27.6121 116.448 27.7041 116.334 27.7041H109.472C109.358 27.7021 109.266 27.6101 109.266 27.4981ZM108.876 11.4913C108.876 13.4189 110.238 14.9826 112.853 14.9826C115.469 14.9826 116.83 13.4189 116.83 11.4913C116.83 9.56369 115.471 8 112.853 8C110.238 8 108.876 9.56369 108.876 11.4913Z' fill='white'/%3E%3C/svg%3E");
                 }
-        
+
                 @-webkit-keyframes formkit-bouncedelay-formkit-form-data-uid-303619af04- {
-        
+
                     0%,
                     80%,
                     100% {
@@ -2132,16 +2256,16 @@
                         -ms-transform: scale(0);
                         transform: scale(0);
                     }
-        
+
                     40% {
                         -webkit-transform: scale(1);
                         -ms-transform: scale(1);
                         transform: scale(1);
                     }
                 }
-        
+
                 @keyframes formkit-bouncedelay-formkit-form-data-uid-303619af04- {
-        
+
                     0%,
                     80%,
                     100% {
@@ -2149,62 +2273,62 @@
                         -ms-transform: scale(0);
                         transform: scale(0);
                     }
-        
+
                     40% {
                         -webkit-transform: scale(1);
                         -ms-transform: scale(1);
                         transform: scale(1);
                     }
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] blockquote {
                     padding: 10px 20px;
                     margin: 0 0 20px;
                     border-left: 5px solid #e1e1e1;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .seva-custom-content {
                     padding: 15px;
                     font-size: 16px;
                     color: #fff;
                     mix-blend-mode: difference;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-modal.guard {
                     max-width: 420px;
                     width: 100%;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] {
                     box-shadow: 0 0px 2px rgba(0, 0, 0, 0.15);
                     max-width: 700px;
                     overflow: hidden;
                 }
-        
+
                 .forms-preview__form .formkit-hero-bg-color,
                 .forms-preview__form .formkit-hero-bg-img,
                 .forms-preview__form .formkit-header,
                 .forms-preview__form .formkit-content {
                     z-index: unset !important;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] [data-style="full"] {
                     width: 100%;
                     display: block;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-container {
                     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
                     padding: 20px;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-hero {
                     margin-bottom: 20px;
                     padding: 30px 5%;
                     position: relative;
                     text-align: center;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-hero-bg-color,
                 .formkit-form[data-uid="303619af04"] .formkit-hero-bg-img {
                     height: 100%;
@@ -2214,22 +2338,22 @@
                     width: 100%;
                     z-index: 1;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-hero-bg-img {
                     background-position: center center;
                     background-size: cover;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-header,
                 .formkit-form[data-uid="303619af04"] .formkit-content {
                     position: relative;
                     z-index: 1001;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-header {
                     margin-bottom: 20px;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-fields {
                     display: -webkit-box;
                     display: -webkit-flex;
@@ -2240,13 +2364,13 @@
                     flex-wrap: wrap;
                     margin: 0 auto;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-fields input,
                 .formkit-form[data-uid="303619af04"] .formkit-fields select {
                     -webkit-appearance: none;
                     appearance: none;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-field,
                 .formkit-form[data-uid="303619af04"] .formkit-submit {
                     -webkit-flex: 1 0 100%;
@@ -2254,25 +2378,25 @@
                     flex: 1 0 100%;
                     margin: 0 0 15px 0;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-fields[data-stacked="false"] .formkit-field,
                 .formkit-form[data-uid="303619af04"] .formkit-fields[data-stacked="false"] .formkit-submit {
                     margin: 0 0 15px;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-fields[data-stacked="false"] .formkit-field {
                     -webkit-flex: 100 1 auto;
                     -ms-flex: 100 1 auto;
                     flex: 100 1 auto;
                     margin-bottom: 0;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-fields[data-stacked="false"] .formkit-field input {
                     border-right: none;
                     border-top-right-radius: 0 !important;
                     border-bottom-right-radius: 0 !important;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-fields[data-stacked="false"] .formkit-submit {
                     -webkit-flex: 1 1 auto;
                     -ms-flex: 1 1 auto;
@@ -2280,46 +2404,50 @@
                     border-top-left-radius: 0 !important;
                     border-bottom-left-radius: 0 !important;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-submit {
                     line-height: 1.4;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-submit>span {
                     padding: 13px 24px;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"] .formkit-powered-by-convertkit-container {
                     margin-bottom: 0;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"][min-width~="700"] [data-style="clean"],
                 .formkit-form[data-uid="303619af04"][min-width~="800"] [data-style="clean"] {
                     padding: 10px;
                 }
-        
+
                 .formkit-form[data-uid="303619af04"][min-width~="700"] .formkit-hero,
                 .formkit-form[data-uid="303619af04"][min-width~="800"] .formkit-hero {
                     padding: 80px 10%;
                 }
             </style>
         </form>
-        <p class="newsletter-success" id="newsletter-success">Thanks for joining! You're officially part of the Humble Elite.</p>
+        <p class="newsletter-success" id="newsletter-success">Thanks for joining! You're officially part of the Humble
+            Elite.</p>
     </section>
-    
+
     <!-- Footer -->
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
                 <h3 class="footer-logo">TOO HUMBLE COUTURE</h3>
-                <p>Premium streetwear for those self-aware enough to laugh at themselves—and stylish enough to do it in elevated fits.</p>
+                <p>Premium streetwear for those self-aware enough to laugh at themselves—and stylish enough to do it in
+                    elevated fits.</p>
                 <div class="footer-social">
-                    <a href="https://instagram.com/toohumblecouture" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-                    <a href="https://tiktok.com/@toohumblecouture" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+                    <a href="https://instagram.com/toohumblecouture" target="_blank" rel="noopener"
+                        aria-label="Instagram">IG</a>
+                    <a href="https://tiktok.com/@toohumblecouture" target="_blank" rel="noopener"
+                        aria-label="TikTok">TT</a>
                     <a href="https://twitter.com/toohumbleco" target="_blank" rel="noopener" aria-label="Twitter">X</a>
                 </div>
             </div>
-            
+
             <div class="footer-column">
                 <h4>Shop</h4>
                 <ul>
@@ -2330,7 +2458,7 @@
                     <li><a href="#sizing">Size Guide</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-column">
                 <h4>Info</h4>
                 <ul>
@@ -2341,7 +2469,7 @@
                     <li><a href="faq.html">FAQ</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-column">
                 <h4>Legal</h4>
                 <ul>
@@ -2351,7 +2479,7 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <p>© 2024 Too Humble Couture. All rights reserved. Stay humble, obviously.</p>
             <div class="footer-payments">
@@ -2362,35 +2490,37 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- Cart Modal -->
     <div class="modal-overlay" id="cart-modal">
-                <p class="cart-subtotal-line">
-                    <span>Subtotal</span>
-                    <span id="cart-subtotal">$0.00</span>
-                </p>
-                <p class="cart-shipping-note">Shipping calculated at checkout</p>
-                <a href="https://too-humble-couture-thc.printify.me" target="_blank" rel="noopener noreferrer" class="btn btn-solid btn-full">Checkout</a>
-            </div>
-                <p class="cart-subtotal-line">
-                    <span>Subtotal</span>
-                    <span id="cart-subtotal">$0.00</span>
-                </p>
-                <p class="cart-shipping-note">Shipping calculated at checkout</p>
-                <a href="https://too-humble-couture-thc.printify.me" target="_blank" rel="noopener noreferrer" class="btn btn-solid btn-full">Checkout</a>
-            </div>
-        </div>
+        <p class="cart-subtotal-line">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">$0.00</span>
+        </p>
+        <p class="cart-shipping-note">Shipping calculated at checkout</p>
+        <a href="https://too-humble-couture-thc.printify.me" target="_blank" rel="noopener noreferrer"
+            class="btn btn-solid btn-full">Checkout</a>
     </div>
-    
+    <p class="cart-subtotal-line">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">$0.00</span>
+    </p>
+    <p class="cart-shipping-note">Shipping calculated at checkout</p>
+    <a href="https://too-humble-couture-thc.printify.me" target="_blank" rel="noopener noreferrer"
+        class="btn btn-solid btn-full">Checkout</a>
+    </div>
+    </div>
+    </div>
+
     <!-- Toast Notification -->
     <div class="toast" id="toast">
         <span id="toast-message">Item added to cart!</span>
     </div>
-    
+
     <script>
         // Cart functionality
         let cart = [];
-        
+
         function addToCart(id, name, price) {
             const existingItem = cart.find(item => item.id === id);
             if (existingItem) {
@@ -2401,21 +2531,21 @@
             updateCartUI();
             showToast('Added to cart: ' + name);
         }
-        
+
         function removeFromCart(id) {
             cart = cart.filter(item => item.id !== id);
             updateCartUI();
         }
-        
+
         function updateCartUI() {
             const cartCount = document.getElementById('cart-count');
             const cartItems = document.getElementById('cart-items');
             const cartTotal = document.getElementById('cart-total');
             const cartSubtotal = document.getElementById('cart-subtotal');
-            
+
             const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
             cartCount.textContent = totalItems;
-            
+
             if (cart.length === 0) {
                 cartItems.innerHTML = '<p style="color: var(--light-gray);">Your cart is empty. Time to get humble.</p>';
                 cartTotal.style.display = 'none';
@@ -2432,23 +2562,23 @@
                         </div>
                     </div>
                 `).join('');
-                
+
                 const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
                 cartSubtotal.textContent = '$' + subtotal.toFixed(2);
                 cartTotal.style.display = 'block';
             }
         }
-        
+
         function openCart() {
             document.getElementById('cart-modal').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
-        
+
         function closeCart() {
             document.getElementById('cart-modal').classList.remove('active');
             document.body.style.overflow = '';
         }
-        
+
         function showToast(message) {
             const toast = document.getElementById('toast');
             const toastMessage = document.getElementById('toast-message');
@@ -2458,30 +2588,30 @@
                 toast.classList.remove('active');
             }, 3000);
         }
-        
+
         // Close modal on outside click
-        document.getElementById('cart-modal').addEventListener('click', function(e) {
+        document.getElementById('cart-modal').addEventListener('click', function (e) {
             if (e.target === this) closeCart();
         });
-        
+
         // Mobile menu
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuToggle.addEventListener('click', function() {
+
+        menuToggle.addEventListener('click', function () {
             this.classList.toggle('active');
             mobileMenu.classList.toggle('active');
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
         });
-        
+
         function closeMobileMenu() {
             menuToggle.classList.remove('active');
             mobileMenu.classList.remove('active');
             document.body.style.overflow = '';
         }
-        
+
         // Navbar scroll effect
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
@@ -2489,42 +2619,42 @@
                 navbar.classList.remove('scrolled');
             }
         });
-        
+
         // Scroll reveal
         const reveals = document.querySelectorAll('.reveal');
-        
+
         function revealOnScroll() {
             reveals.forEach(el => {
                 const windowHeight = window.innerHeight;
                 const revealTop = el.getBoundingClientRect().top;
                 const revealPoint = 150;
-                
+
                 if (revealTop < windowHeight - revealPoint) {
                     el.classList.add('active');
                 }
             });
         }
-        
+
         window.addEventListener('scroll', revealOnScroll);
         revealOnScroll();
-        
+
         // Form handlers
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
             e.preventDefault();
             const formData = new FormData(this);
             // In production, this would send to your backend
             showToast('Message sent! We\'ll get back to you soon.');
             this.reset();
         });
-        
-        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+
+        document.getElementById('newsletter-form').addEventListener('submit', function (e) {
             e.preventDefault();
             const email = this.querySelector('input[type="email"]').value;
             // This would integrate with Kit in production
             this.style.display = 'none';
             document.getElementById('newsletter-success').style.display = 'block';
         });
-        
+
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -2540,4 +2670,5 @@
         });
     </script>
 </body>
+
 </html>
