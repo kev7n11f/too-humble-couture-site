@@ -6,7 +6,15 @@
     "build": "echo 'Static site - no build needed'",
     "start": "npx serve public"
   },
-  "keywords": ["streetwear", "fashion", "humble", "clothing"],
+  "keywords": [
+    "streetwear",
+    "fashion",
+    "humble",
+    "clothing"
+  ],
   "author": "Too Humble Couture",
-  "license": "PROPRIETARY"
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "@vercel/analytics": "^1.6.1"
+  }
 }
